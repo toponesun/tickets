@@ -157,7 +157,7 @@ class User
             return;
         }
         //端口session已过期的处理
-        if (time() - $_SESSION[$client]["active_time"] > SESSION_LIVE_TIME){
+        if (time() - $_SESSION[$client]["active_time"] > ORDER_LIVE_TIME){
             $result["msg"] = "您长时间未操作，系统已自动退出！";
             self::logout($result,$GET);
         }else{

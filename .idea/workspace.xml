@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2bcd7864-d32f-4689-ba29-9fa6aa259e93" name="默认的" comment="" />
+    <list default="true" id="2bcd7864-d32f-4689-ba29-9fa6aa259e93" name="默认的" comment="默认的">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/123.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/Ajax.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/Ajax.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/class/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/class/User.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,11 +30,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="29" column="43" lean-forward="true" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
+            <state relative-caret-position="-336">
+              <caret line="41" column="10" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Sys.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/class/Sys.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="37" selection-start-line="37" selection-end-line="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Ajax.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/api/Ajax.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="21" column="39" lean-forward="true" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -55,7 +78,7 @@
       <file leaf-file-name="conductor.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/conductor.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
+            <state relative-caret-position="24624">
               <caret line="1026" selection-start-line="1026" selection-end-line="1026" />
             </state>
           </provider>
@@ -143,6 +166,9 @@
       <replace>customer</replace>
     </replaceStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -169,14 +195,11 @@
         <option value="$PROJECT_DIR$/test.html" />
         <option value="$PROJECT_DIR$/app/customer/controller/Ajax.php" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/api/class/User.php" />
         <option value="$PROJECT_DIR$/css/animation.css" />
         <option value="$PROJECT_DIR$/app/customer/controller/System.php" />
         <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$PROJECT_DIR$/app/customer/controller/Template.php" />
-        <option value="$PROJECT_DIR$/api/class/Sys.php" />
         <option value="$PROJECT_DIR$/app/customer/controller/Tickets.php" />
-        <option value="$PROJECT_DIR$/api/Ajax.php" />
         <option value="$PROJECT_DIR$/api/class/Cart.php" />
         <option value="$PROJECT_DIR$/api/class/Order.php" />
         <option value="$PROJECT_DIR$/css/mobile.css" />
@@ -197,6 +220,9 @@
         <option value="$PROJECT_DIR$/api/class/MyTic.php" />
         <option value="$PROJECT_DIR$/js/conductor.js" />
         <option value="$PROJECT_DIR$/js/customer.js" />
+        <option value="$PROJECT_DIR$/api/class/User.php" />
+        <option value="$PROJECT_DIR$/api/class/Sys.php" />
+        <option value="$PROJECT_DIR$/api/Ajax.php" />
       </list>
     </option>
   </component>
@@ -215,34 +241,45 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-10" />
     <option name="y" value="-10" />
-    <option name="width" value="918" />
-    <option name="height" value="1418" />
+    <option name="width" value="919" />
+    <option name="height" value="1419" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="tickets" type="cbb8eebc:String" user="tickets" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="tickets" type="b2602c69:ProjectViewProjectNode" />
               <item name="tickets" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="tickets" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tickets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="api" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="tickets" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tickets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="api" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="class" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="tickets" type="cbb8eebc:String" user="tickets" />
             </path>
           </expand>
           <select />
@@ -434,16 +471,19 @@
       <workItem from="1536107433848" duration="26046000" />
       <workItem from="1536195422275" duration="1066000" />
       <workItem from="1536197451728" duration="1211000" />
+      <workItem from="1536215407108" duration="307000" />
+      <workItem from="1536215734074" duration="978000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1534073000" />
+    <option name="totallyTimeSpent" value="1535358000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13404825" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13672923" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.3298292" />
@@ -617,8 +657,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api/class/Cart.php" />
     <entry file="file://$PROJECT_DIR$/api/class/Scenic.php" />
-    <entry file="file://$PROJECT_DIR$/api/class/Sys.php" />
-    <entry file="file://$PROJECT_DIR$/api/class/User.php" />
     <entry file="file://$PROJECT_DIR$/api/class/Order.php" />
     <entry file="file://$PROJECT_DIR$/app/customer/controller/MyTickets.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -656,7 +694,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/class/Ticket.php" />
-    <entry file="file://$PROJECT_DIR$/api/Get.php" />
     <entry file="file://$PROJECT_DIR$/api/class/Cashier.php" />
     <entry file="file://$PROJECT_DIR$/app/customer/controller/System.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -681,7 +718,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/customer.css" />
     <entry file="file://$PROJECT_DIR$/api/class/Trade.php" />
-    <entry file="file://$PROJECT_DIR$/123.html" />
     <entry file="file://$PROJECT_DIR$/js/base.js" />
     <entry file="file://$PROJECT_DIR$/app/admin/controller/Ajax.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -705,7 +741,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/Post.php" />
-    <entry file="file://$PROJECT_DIR$/api/Ajax.php" />
     <entry file="file://$PROJECT_DIR$/app/customer/controller/MobileTemplate.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4560">
@@ -714,21 +749,52 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/class/MyTic.php" />
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="29" column="43" lean-forward="true" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/conductor.html" />
     <entry file="file://$PROJECT_DIR$/js/conductor.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
+        <state relative-caret-position="24624">
           <caret line="1026" selection-start-line="1026" selection-end-line="1026" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/customer.js" />
+    <entry file="file://$PROJECT_DIR$/123.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/Get.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="73" lean-forward="true" selection-start-line="73" selection-end-line="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/class/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="159" column="72" selection-start-line="159" selection-start-column="72" selection-end-line="159" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-336">
+          <caret line="41" column="10" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/class/Sys.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/Ajax.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="21" column="39" lean-forward="true" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>

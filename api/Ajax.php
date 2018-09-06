@@ -4,7 +4,7 @@ class Ajax
     public $act,$arr,$result;
     function __construct($Ajax){
         //加载网站配置
-        //$data = Mysql::query("select * from sys_web_set",1);
+        $data = Mysql::query("select * from sys_web_set",1);
         if (!empty($data)){
             define("TITLE_SUFFIX", $data[0]["title_suffix"]);//网站标题后缀
             define("SESSION_LIVE_TIME",$data[0]["session_live_time"]);//session存活时间
