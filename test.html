@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>测试_在线订票系统</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/base.css"/>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/base.js"></script>
+    <style>
+        main{
+            position: fixed;
+            top: 0;left: 0;
+            right: 0;bottom: 0;
+            overflow: auto;
+        }
+        table{
+            background-color: #FFF;
+            margin: 10px 0;width: 100%;
+        }
+        table th{
+            text-align: left;
+            padding-left: 10px;
+        }
+        table td{
+            border: solid 1px #EEE;
+            padding: 5px 10px;
+        }
+        input[type="text"]{
+            padding: 0 5px;
+            width: 100%;
+        }
+        .api{
+
+        }
+    </style>
+</head>
+<body>
+
+<main class="api">
+    <div style="width: 100%;padding: 10px 20px">
+        <h3 style="text-align: center">接口测试工具</h3>
+        <label for="ajax_url">请求地址：</label>
+        <input type="text" id="ajax_url" value="api/index.php"/>
+    </div>
+
+    <div style="width: 50%;height: auto;background-color: #AFA;padding:20px;float: left;position: relative">
+        <div style="position: absolute;right:20px;top:10px">
+            <button type="button" class="btn btn-dark btn-sm reset_get_kv">重置</button>
+            <button type="button" class="btn btn-dark btn-sm add_get_kv">添加参数</button>
+        </div>
+        <form class="get_form">
+            GET：
+            <table class="get_tb">
+                <tr>
+                    <th>参数</th>
+                    <th>值</th>
+                    <th>操作</th>
+                </tr>
+                <tr>
+                    <td><input type="text" class="get_key"/></td>
+                    <td><input type="text" class="get_val"/></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><input type="text" class="get_key"/></td>
+                    <td><input type="text" class="get_val"/></td>
+                    <td><button type="button" class="btn btn-danger btn-sm remove_kv">移除</button></td>
+                </tr>
+            </table>
+            <button type="button" class="btn btn-success ajax-get">GET请求</button>
+        </form>
+
+        <div class="get_result" style="font-size:14px;width: 100%;background-color: #FFF;padding: 10px;margin-top:10px;overflow: auto;height: 350px">
+            这里输出返回的结果
+        </div>
+    </div>
+
+
+
+    <div style="width: 50%;height: auto;background-color: #8DF;padding:20px;float: left;position: relative">
+        <div style="position: absolute;right:20px;top:10px">
+            <button type="button" class="btn btn-dark btn-sm reset_post_kv">重置</button>
+            <button type="button" class="btn btn-dark btn-sm add_post_kv">添加参数</button>
+        </div>
+        <form class="post_form">
+            POST：
+            <table class="post_tb">
+                <tr>
+                    <th>参数</th>
+                    <th>值</th>
+                    <th>操作</th>
+                </tr>
+                <tr>
+                    <td><input type="text" class="post_key"/></td>
+                    <td><input type="text" class="post_val"/></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><input type="text" class="post_key"/></td>
+                    <td><input type="text" class="post_val"/></td>
+                    <td><button type="button" class="btn btn-danger btn-sm remove_kv">移除</button></td>
+                </tr>
+            </table>
+            <button type="button" class="btn btn-success ajax-post">POST请求</button>
+        </form>
+        <div class="post_result" style="font-size:14px;width: 100%;background-color: #FFF;padding: 10px;margin-top:10px;overflow: auto;height: 350px">
+            这里输出返回的结果
+        </div>
+    </div>
+</main>
+
+
+
+
+
+
+
+<script>
+    $(".ajax-get").click(function () {
+        let data = {},data_key = [],data_val = [],
+        get_keys = $(".get_key"),get_vals = $(".get_val");
+
+        get_keys.each(function () {
+            data_key.push($(this).val());
+        });
+        get_vals.each(function () {
+            data_val.push($(this).val());
+        });
+
+        for (let i=0;i<data_key.length;i++){
+            if (data[data_key[i]] !== "") {
+                data[data_key[i]] = data_val[i];
+            }
+        }
+        $.ajax({
+            type:"get",
+            url:$("#ajax_url").val(),
+            data:data,
+            success:function (result) {
+                result = sys.UniDecode(result);
+                let date = new Date();
+                let div = $(".get_result");
+                let str = date.format("yyyy-MM-dd H:i:s")
+                    + "&nbsp;&nbsp;GET请求成功！接口返回的数据如下：<br/>"
+                    + result + "<br/><br/>*************************************************************************************<br/><br/>";
+                div.html(str + div.html());
+            },
+            error:function () {
+                let date = new Date();
+                let div = $(".get_result");
+                let str = date.format("yyyy-MM-dd H:i:s")
+                    + "&nbsp;&nbsp;GET请求失败！接口未响应或不存在！<br/><br/>";
+                div.html(str + div.html());
+            }
+        })
+    });
+
+
+
+    $(".ajax-post").click(function () {
+        let data = {},data_key = [],data_val = [],
+            get_keys = $(".post_key"),get_vals = $(".post_val");
+
+        get_keys.each(function () {
+            data_key.push($(this).val());
+        });
+        get_vals.each(function () {
+            data_val.push($(this).val());
+        });
+
+        for (let i=0;i<data_key.length;i++){
+            if (data[data_key[i]] !== "") {
+                data[data_key[i]] = data_val[i];
+            }
+        }
+        $.ajax({
+            type:"post",
+            url:$("#ajax_url").val(),
+            data:data,
+            success:function (result) {
+                result = sys.UniDecode(result);
+                let date = new Date();
+                let div = $(".post_result");
+                let str = date.format("yyyy-MM-dd H:i:s")
+                    + "&nbsp;&nbsp;POST请求成功！接口返回的数据如下：<br/>"
+                    + result + "<br/><br/>*************************************************************************************<br/><br/>";
+                div.html(str + div.html());
+            },
+            error:function () {
+                let date = new Date();
+                let div = $(".post_result");
+                let str = date.format("yyyy-MM-dd H:i:s")
+                    + "&nbsp;&nbsp;POST请求失败！接口未响应或不存在！<br/><br/>";
+                div.html(str + div.html());
+            }
+        })
+    });
+
+
+
+    $(".add_get_kv").click(function () {
+        $(".get_tb").append(`
+        <tr>
+            <td><input type="text" class="get_key"/></td>
+            <td><input type="text" class="get_val"/></td>
+            <td><button type="button" class="btn btn-danger btn-sm remove_kv">移除</button></td>
+        </tr>
+        `);
+    });
+    $(".add_post_kv").click(function () {
+        $(".post_tb").append(`
+        <tr>
+            <td><input type="text" class="post_key"/></td>
+            <td><input type="text" class="post_val"/></td>
+            <td><button type="button" class="btn btn-danger btn-sm remove_kv">移除</button></td>
+        </tr>
+        `);
+    });
+    $("body").on("click",".remove_kv",function () {
+        $(this).parent("td").parent("tr").remove();
+    });
+
+    
+    $(".reset_get_kv").click(function () {
+        $(".get_form")[0].reset();
+    });
+    $(".reset_post_kv").click(function () {
+        $(".post_form")[0].reset();
+    });
+
+</script>
+</body>
+</html>

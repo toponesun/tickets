@@ -1,0 +1,734 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2bcd7864-d32f-4689-ba29-9fa6aa259e93" name="默认的" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="312">
+              <caret line="29" column="43" lean-forward="true" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="conductor.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/conductor.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1560">
+              <caret line="65" selection-start-line="65" selection-end-line="65" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/base.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2568">
+              <caret line="107" selection-start-line="107" selection-end-line="107" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="conductor.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/conductor.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="648">
+              <caret line="1026" selection-start-line="1026" selection-end-line="1026" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MobileTemplate.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/customer/controller/MobileTemplate.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4560">
+              <caret line="190" column="26" selection-start-line="190" selection-start-column="26" selection-end-line="190" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>bala</find>
+      <find>payment-area</find>
+      <find>cashier</find>
+      <find>odd-change</find>
+      <find>结算</find>
+      <find>cart</find>
+      <find>e(o</find>
+      <find>取消</find>
+      <find>payment-ar</find>
+      <find>cashier&quot;</find>
+      <find>page-of</find>
+      <find>refundor</find>
+      <find>alert</find>
+      <find>switchpa</find>
+      <find>订单超时将自动取消</find>
+      <find>pagina</find>
+      <find>conductor</find>
+      <find>pagination</find>
+      <find>payment-bl</find>
+      <find>sys.mkPagination</find>
+      <find>xs</find>
+      <find>switchpage</find>
+      <find>UserInfo</find>
+      <find>pagi</find>
+      <find>mkPagination</find>
+      <find>page-of-m</find>
+      <find>show_</find>
+      <find>ask</find>
+      <find>作废</find>
+      <find>ticketlis</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>$row</replace>
+      <replace>$fatherKey</replace>
+      <replace>02879B</replace>
+      <replace>MobileTemplate</replace>
+      <replace>MobileActions</replace>
+      <replace>vertical-align: 35px</replace>
+      <replace>bid</replace>
+      <replace>商家</replace>
+      <replace>ajax_url</replace>
+      <replace>business</replace>
+      <replace>getTips</replace>
+      <replace>&lt;th colspan</replace>
+      <replace>MobileActions::getPageHtml</replace>
+      <replace>tickets</replace>
+      <replace>btn</replace>
+      <replace>layui-btn</replace>
+      <replace>flag</replace>
+      <replace>$_SESSION['customer']</replace>
+      <replace>post_val</replace>
+      <replace>srcPath</replace>
+      <replace>cartCtrl</replace>
+      <replace>o.code == &quot;0&quot;</replace>
+      <replace>o.code === 0</replace>
+      <replace>Sys::rndKey</replace>
+      <replace>conductor</replace>
+      <replace>customer</replace>
+    </replaceStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/../index.html" />
+        <option value="$PROJECT_DIR$/app/login.php" />
+        <option value="$PROJECT_DIR$/app/Captcha.php" />
+        <option value="$PROJECT_DIR$/api/class/Scenic.php" />
+        <option value="$PROJECT_DIR$/api/class/Mytic.php" />
+        <option value="$PROJECT_DIR$/app/customer/controller/MyTickets.php" />
+        <option value="$PROJECT_DIR$/login.html" />
+        <option value="$PROJECT_DIR$/1.html" />
+        <option value="$PROJECT_DIR$/app/admin/controller/System.php" />
+        <option value="$PROJECT_DIR$/app/customer/controller/MobileSystem.php" />
+        <option value="$PROJECT_DIR$/mobile.html" />
+        <option value="$PROJECT_DIR$/app/customer/controller/Cart.php" />
+        <option value="$PROJECT_DIR$/api/index.php" />
+        <option value="$PROJECT_DIR$/js/main.js" />
+        <option value="$PROJECT_DIR$/base.php" />
+        <option value="$PROJECT_DIR$/admin.php" />
+        <option value="$PROJECT_DIR$/test.php" />
+        <option value="$PROJECT_DIR$/app/Mysql.php" />
+        <option value="$PROJECT_DIR$/app/customer/controller/Cashier.php" />
+        <option value="$PROJECT_DIR$/app/customer/controller/MyOrders.php" />
+        <option value="$PROJECT_DIR$/test.html" />
+        <option value="$PROJECT_DIR$/app/customer/controller/Ajax.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/api/class/User.php" />
+        <option value="$PROJECT_DIR$/css/animation.css" />
+        <option value="$PROJECT_DIR$/app/customer/controller/System.php" />
+        <option value="$PROJECT_DIR$/css/main.css" />
+        <option value="$PROJECT_DIR$/app/customer/controller/Template.php" />
+        <option value="$PROJECT_DIR$/api/class/Sys.php" />
+        <option value="$PROJECT_DIR$/app/customer/controller/Tickets.php" />
+        <option value="$PROJECT_DIR$/api/Ajax.php" />
+        <option value="$PROJECT_DIR$/api/class/Cart.php" />
+        <option value="$PROJECT_DIR$/api/class/Order.php" />
+        <option value="$PROJECT_DIR$/css/mobile.css" />
+        <option value="$PROJECT_DIR$/api/class/Cashier.php" />
+        <option value="$PROJECT_DIR$/api/class/Ticket.php" />
+        <option value="$PROJECT_DIR$/api/Get.php" />
+        <option value="$PROJECT_DIR$/css/customer.css" />
+        <option value="$PROJECT_DIR$/app/admin/controller/Ajax.php" />
+        <option value="$PROJECT_DIR$/js/admin.js" />
+        <option value="$PROJECT_DIR$/api/class/Trade.php" />
+        <option value="$PROJECT_DIR$/123.html" />
+        <option value="$PROJECT_DIR$/js/base.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/conductor.html" />
+        <option value="$PROJECT_DIR$/css/conductor.css" />
+        <option value="$PROJECT_DIR$/css/base.css" />
+        <option value="$PROJECT_DIR$/api/Post.php" />
+        <option value="$PROJECT_DIR$/api/class/MyTic.php" />
+        <option value="$PROJECT_DIR$/js/conductor.js" />
+        <option value="$PROJECT_DIR$/js/customer.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-10" />
+    <option name="y" value="-10" />
+    <option name="width" value="918" />
+    <option name="height" value="1418" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="tickets" type="cbb8eebc:String" user="tickets" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="tickets" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tickets" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="SearchEverywhereHistoryKey" value="getUid&#9;null&#9;null&#10;getTicketsDetail&#9;null&#9;null&#10;$_SESSION&#9;null&#9;null" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+    <property name="full.screen.before.presentation.mode" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../jiaoben4776" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\phpStudy\WWW\tickets\api" />
+      <recent name="C:\phpStudy\WWW\tickets\app" />
+      <recent name="C:\phpStudy\WWW\tickets" />
+      <recent name="C:\phpStudy\WWW\tickets\css" />
+      <recent name="D:\phpStudy\WWW\tickets\js" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2bcd7864-d32f-4689-ba29-9fa6aa259e93" name="默认的" comment="" />
+      <created>1524880913516</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1524880913516</updated>
+      <workItem from="1524880914875" duration="7581000" />
+      <workItem from="1525221323544" duration="10006000" />
+      <workItem from="1525307673123" duration="5226000" />
+      <workItem from="1525394602720" duration="13997000" />
+      <workItem from="1525480409186" duration="8443000" />
+      <workItem from="1525653587063" duration="12633000" />
+      <workItem from="1525740140303" duration="8197000" />
+      <workItem from="1525827130314" duration="13590000" />
+      <workItem from="1525912449093" duration="8846000" />
+      <workItem from="1526000795462" duration="5959000" />
+      <workItem from="1526088173980" duration="8105000" />
+      <workItem from="1526258074686" duration="3872000" />
+      <workItem from="1526265552633" duration="1325000" />
+      <workItem from="1526373396108" duration="4815000" />
+      <workItem from="1526430584742" duration="22728000" />
+      <workItem from="1526517257729" duration="16617000" />
+      <workItem from="1526604078550" duration="13302000" />
+      <workItem from="1526690376141" duration="21133000" />
+      <workItem from="1526863968592" duration="4334000" />
+      <workItem from="1526888978670" duration="10000" />
+      <workItem from="1526889052877" duration="1691000" />
+      <workItem from="1526890842626" duration="2713000" />
+      <workItem from="1526949713145" duration="15869000" />
+      <workItem from="1527036604859" duration="12185000" />
+      <workItem from="1527210030845" duration="3861000" />
+      <workItem from="1527231923270" duration="55000" />
+      <workItem from="1527468365315" duration="14986000" />
+      <workItem from="1527554366131" duration="14768000" />
+      <workItem from="1527640805923" duration="2632000" />
+      <workItem from="1527727958788" duration="8780000" />
+      <workItem from="1527813550912" duration="5172000" />
+      <workItem from="1527901109770" duration="6225000" />
+      <workItem from="1527923605019" duration="3404000" />
+      <workItem from="1528072565955" duration="595000" />
+      <workItem from="1528159235498" duration="7365000" />
+      <workItem from="1528436415016" duration="11238000" />
+      <workItem from="1528504522788" duration="12962000" />
+      <workItem from="1528679306900" duration="4283000" />
+      <workItem from="1528784806872" duration="4521000" />
+      <workItem from="1528853408116" duration="17229000" />
+      <workItem from="1528947212511" duration="10011000" />
+      <workItem from="1529023059901" duration="9600000" />
+      <workItem from="1529136532437" duration="1555000" />
+      <workItem from="1529374942246" duration="1958000" />
+      <workItem from="1529401448687" duration="953000" />
+      <workItem from="1529463570805" duration="14906000" />
+      <workItem from="1529541549884" duration="18782000" />
+      <workItem from="1529630636949" duration="22043000" />
+      <workItem from="1529660620680" duration="795000" />
+      <workItem from="1529715890431" duration="4421000" />
+      <workItem from="1529742423072" duration="1757000" />
+      <workItem from="1529909768086" duration="1468000" />
+      <workItem from="1529914063803" duration="6454000" />
+      <workItem from="1529975060098" duration="1881000" />
+      <workItem from="1529994023144" duration="6305000" />
+      <workItem from="1530062410162" duration="21957000" />
+      <workItem from="1530147187042" duration="4987000" />
+      <workItem from="1530163509937" duration="13329000" />
+      <workItem from="1530233767579" duration="26374000" />
+      <workItem from="1530322576682" duration="1273000" />
+      <workItem from="1530514237519" duration="2428000" />
+      <workItem from="1530579840031" duration="21993000" />
+      <workItem from="1530665550898" duration="18642000" />
+      <workItem from="1530752755302" duration="21157000" />
+      <workItem from="1530837913624" duration="26108000" />
+      <workItem from="1530925179690" duration="12025000" />
+      <workItem from="1530948376787" duration="9207000" />
+      <workItem from="1531097229040" duration="26534000" />
+      <workItem from="1531183224773" duration="18089000" />
+      <workItem from="1531207073824" duration="4874000" />
+      <workItem from="1531269842511" duration="618000" />
+      <workItem from="1531357640925" duration="22573000" />
+      <workItem from="1531443200895" duration="2587000" />
+      <workItem from="1531449076026" duration="18000" />
+      <workItem from="1531449116903" duration="21000" />
+      <workItem from="1531449303578" duration="713000" />
+      <workItem from="1531555745615" duration="33000" />
+      <workItem from="1531555807606" duration="3936000" />
+      <workItem from="1531701956652" duration="966000" />
+      <workItem from="1531703248221" duration="3851000" />
+      <workItem from="1531712240663" duration="52000" />
+      <workItem from="1531712321047" duration="16000" />
+      <workItem from="1531712368575" duration="8195000" />
+      <workItem from="1531790510623" duration="20956000" />
+      <workItem from="1531874057585" duration="29945000" />
+      <workItem from="1531960609941" duration="28704000" />
+      <workItem from="1532046481887" duration="29753000" />
+      <workItem from="1532080808374" duration="32000" />
+      <workItem from="1532133455547" duration="17244000" />
+      <workItem from="1532161291594" duration="405000" />
+      <workItem from="1532162034576" duration="122000" />
+      <workItem from="1532162329200" duration="4528000" />
+      <workItem from="1532308488240" duration="641000" />
+      <workItem from="1532310329139" duration="18948000" />
+      <workItem from="1532392366489" duration="16659000" />
+      <workItem from="1532421836912" duration="4760000" />
+      <workItem from="1532479008707" duration="4716000" />
+      <workItem from="1532502602519" duration="7303000" />
+      <workItem from="1532565027623" duration="21508000" />
+      <workItem from="1532651571205" duration="23356000" />
+      <workItem from="1532739934592" duration="17444000" />
+      <workItem from="1532910860643" duration="15477000" />
+      <workItem from="1533000392765" duration="13958000" />
+      <workItem from="1533084355369" duration="21388000" />
+      <workItem from="1533170691850" duration="12691000" />
+      <workItem from="1533257306369" duration="25323000" />
+      <workItem from="1533348013008" duration="19363000" />
+      <workItem from="1533515987845" duration="14470000" />
+      <workItem from="1533602423331" duration="3143000" />
+      <workItem from="1533620171955" duration="10920000" />
+      <workItem from="1533689118859" duration="8483000" />
+      <workItem from="1533776215955" duration="15962000" />
+      <workItem from="1533862370946" duration="17141000" />
+      <workItem from="1533948346406" duration="11141000" />
+      <workItem from="1534121237796" duration="15390000" />
+      <workItem from="1534207519961" duration="14038000" />
+      <workItem from="1534294026389" duration="4521000" />
+      <workItem from="1534303706875" duration="2779000" />
+      <workItem from="1534307875716" duration="11255000" />
+      <workItem from="1534321561085" duration="3888000" />
+      <workItem from="1534379900140" duration="11404000" />
+      <workItem from="1534466441189" duration="12320000" />
+      <workItem from="1534552984903" duration="14625000" />
+      <workItem from="1534726157371" duration="22720000" />
+      <workItem from="1534812085573" duration="14423000" />
+      <workItem from="1534898706703" duration="5787000" />
+      <workItem from="1534985305105" duration="19194000" />
+      <workItem from="1535071192220" duration="19512000" />
+      <workItem from="1535162910657" duration="14970000" />
+      <workItem from="1535330113775" duration="31009000" />
+      <workItem from="1535416319872" duration="31509000" />
+      <workItem from="1535502657617" duration="26002000" />
+      <workItem from="1535590890397" duration="1985000" />
+      <workItem from="1535598370909" duration="12055000" />
+      <workItem from="1535676192088" duration="6903000" />
+      <workItem from="1535763243874" duration="11499000" />
+      <workItem from="1535934933732" duration="23272000" />
+      <workItem from="1536021246237" duration="21508000" />
+      <workItem from="1536107433848" duration="26046000" />
+      <workItem from="1536195422275" duration="1066000" />
+      <workItem from="1536197451728" duration="1211000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1534073000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13404825" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.3298292" />
+      <window_info anchor="right" id="Database" order="4" weight="0.3295129" />
+      <window_info anchor="bottom" id="Database Changes" order="8" weight="0.32913166" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3277311" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="找到" order="8" weight="0.32960895" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="运行" order="7" weight="0.4622905" />
+      <window_info anchor="right" id="数据库" order="3" weight="0.3295129" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="调试" order="7" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32913166" />
+    </layout>
+    <layout-to-restore>
+      <window_info anchor="bottom" id="找到" order="13" weight="0.32960895" />
+      <window_info anchor="bottom" id="运行" order="8" weight="0.4622905" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13402778" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" id="Database" order="3" weight="0.3295129" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3285151" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.3298292" />
+      <window_info anchor="bottom" id="Database Changes" order="14" weight="0.32913166" />
+      <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="调试" order="12" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3298292" />
+      <window_info anchor="right" id="数据库" order="4" weight="0.3295129" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="22" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/js/mobile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/customer/controller/MobileActions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-864">
+          <caret line="347" column="58" selection-start-line="347" selection-start-column="54" selection-end-line="347" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.html" />
+    <entry file="file://$PROJECT_DIR$/app/admin/controller/System.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="91" column="56" lean-forward="true" selection-start-line="91" selection-start-column="37" selection-end-line="91" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobile.html" />
+    <entry file="file://$PROJECT_DIR$/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="168" column="8" lean-forward="true" selection-start-line="168" selection-start-column="8" selection-end-line="170" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/index.php" />
+    <entry file="file://$PROJECT_DIR$/app/customer/controller/Cart.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="581">
+          <caret line="272" column="18" selection-start-line="272" selection-start-column="15" selection-end-line="272" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="610">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.php" />
+    <entry file="file://$PROJECT_DIR$/app/Mysql.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/customer/controller/Cashier.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1102">
+          <caret line="265" column="24" lean-forward="true" selection-start-line="234" selection-start-column="8" selection-end-line="265" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/customer/controller/MyOrders.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="113" column="9" selection-start-line="113" selection-start-column="9" selection-end-line="113" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="183" column="47" selection-start-line="183" selection-start-column="47" selection-end-line="183" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/customer/controller/Ajax.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3159">
+          <caret line="126" column="22" lean-forward="true" selection-start-line="126" selection-start-column="22" selection-end-line="126" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-11">
+          <caret line="41" column="35" lean-forward="true" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/animation.css" />
+    <entry file="file://$PROJECT_DIR$/app/customer/controller/MobileSystem.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="213" column="16" selection-start-line="213" selection-start-column="16" selection-end-line="217" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/customer/controller/Tickets.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="85" column="79" lean-forward="true" selection-start-line="85" selection-start-column="79" selection-end-line="85" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/class/Cart.php" />
+    <entry file="file://$PROJECT_DIR$/api/class/Scenic.php" />
+    <entry file="file://$PROJECT_DIR$/api/class/Sys.php" />
+    <entry file="file://$PROJECT_DIR$/api/class/User.php" />
+    <entry file="file://$PROJECT_DIR$/api/class/Order.php" />
+    <entry file="file://$PROJECT_DIR$/app/customer/controller/MyTickets.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1269">
+          <caret line="47" column="8" selection-start-line="47" selection-start-column="8" selection-end-line="63" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="730" selection-start-line="730" selection-end-line="742" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="49">
+          <caret line="127" selection-start-line="127" selection-end-line="146" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/mobile.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="168" selection-start-line="168" selection-end-line="173" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/customer/controller/Actions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="49">
+          <caret line="132" column="4" lean-forward="true" selection-start-line="132" selection-start-column="4" selection-end-line="154" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/class/Ticket.php" />
+    <entry file="file://$PROJECT_DIR$/api/Get.php" />
+    <entry file="file://$PROJECT_DIR$/api/class/Cashier.php" />
+    <entry file="file://$PROJECT_DIR$/app/customer/controller/System.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14229">
+          <caret line="527" column="16" selection-start-line="527" selection-start-column="16" selection-end-line="536" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/customer/controller/Template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="837" column="26" selection-start-line="837" selection-start-column="26" selection-end-line="837" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/admin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/customer.css" />
+    <entry file="file://$PROJECT_DIR$/api/class/Trade.php" />
+    <entry file="file://$PROJECT_DIR$/123.html" />
+    <entry file="file://$PROJECT_DIR$/js/base.js" />
+    <entry file="file://$PROJECT_DIR$/app/admin/controller/Ajax.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="138" column="37" selection-start-line="138" selection-start-column="37" selection-end-line="138" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/conductor.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1560">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/base.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2568">
+          <caret line="107" selection-start-line="107" selection-end-line="107" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/Post.php" />
+    <entry file="file://$PROJECT_DIR$/api/Ajax.php" />
+    <entry file="file://$PROJECT_DIR$/app/customer/controller/MobileTemplate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4560">
+          <caret line="190" column="26" selection-start-line="190" selection-start-column="26" selection-end-line="190" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/class/MyTic.php" />
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="29" column="43" lean-forward="true" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conductor.html" />
+    <entry file="file://$PROJECT_DIR$/js/conductor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="1026" selection-start-line="1026" selection-end-line="1026" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/customer.js" />
+  </component>
+</project>

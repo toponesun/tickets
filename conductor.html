@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title> </title>
+    <link rel="bookmark" href="favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/animation.css"/>
+    <link rel="stylesheet" href="css/conductor.css"/>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/jquery.jqprint-0.3.js"></script>
+    <script src="js/qrcode.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/laydate/laydate.js"></script>
+    <script src="js/highcharts.js"></script>
+    <script src="js/base.js"></script>
+    <script src="js/conductor.js"></script>
+</head>
+<body>
+<aside>
+    <div class="cover-10"></div>
+    <div class="cover-90"></div>
+    <div class="loading">
+        <div class="load-ring"></div>
+    </div>
+    <div class="body-alert">
+        <div class="body-alert-img"><img src="image/yes.png"></div>
+        <div class="body-alert-text"></div>
+    </div>
+    <div class="body-ask">
+        <div class="body-ask-img"><img src="image/warn.png"></div>
+        <div class="body-ask-text"></div>
+        <div class="body-ask-true" onclick="closeAsk();">确定</div>
+        <div class="body-ask-false" onclick="closeAsk();">取消</div>
+    </div>
+</aside>
+
+<header>
+    <div class="logo-area">
+        <img src="image/logo.png"/><br/>窗口售票
+    </div>
+    <menu>
+        <ul>
+            <li class="menu-of-ticket" onclick="conductor.do.switchPage('ticket')">售票中心</li>
+            <li class="menu-of-order" onclick="conductor.do.switchPage('order')">订单管理</li>
+            <li class="menu-of-soldTic" onclick="conductor.do.switchPage('soldTic')">票券管理</li>
+            <li class="menu-of-form" onclick="conductor.do.switchPage('form')">数据报表数据</li>
+            <li class="menu-of-me" onclick="conductor.do.switchPage('me')">个人中心</li>
+        </ul>
+    </menu>
+    <div class="user-area">
+        <img src="image/logo.png"/><br/>
+        <span class="nickname"> </span><br/>
+        <button type="button" class="btn btn-xs btn-secondary">交接班</button><br/>
+        <button type="button" class="btn btn-xs btn-secondary" onclick="sys.logout('conductor')">安全退出</button>
+    </div>
+</header>
+<main class="page-of-ticket" style="bottom: 260px">
+    <div class="body-search">
+        <form id="ticket-term-form" class="form-inline">
+            <input id="ticket-date-range" type="text" class="form-control mr-1 mb-1 ticket-term" style="width: 220px" placeholder="请选择时间段"/>
+            <input id="ticket-search-text" type="text" class="form-control mr-1 mb-1 ticket-term" placeholder="输入要查找的关键字"/>
+            <select id="ticket-term-type" class="form-control mr-1 mb-1 ticket-term" style="width: 120px">
+                <option value="">票券种类</option>
+                <option value="儿童票">儿童票</option>
+                <option value="军人票">军人票</option>
+                <option value="学生票">学生票</option>
+                <option value="成人票">成人票</option>
+                <option value="老年票">老年票</option>
+            </select>
+            <select id="ticket-term-scenic" class="form-control mr-1 mb-1 ticket-term" style="width: 120px">
+                <option value="">所属景点</option>
+                <option value="P201807060001">上海迪士尼乐园</option>
+                <option value="P201805090001">世界之窗（5A）</option>
+                <option value="P201805150002">欢乐海岸</option>
+                <option value="P201805090002">锦绣中华民俗文化村</option>
+            </select>
+            <select id="ticket-term-times" class="form-control mr-1 mb-1 ticket-term" style="width: 120px">
+                <option value="">有效次数</option>
+                <option value="0-1">1次</option>
+                <option value="2-10">2-10次</option>
+                <option value="10-1000">10次以上</option>
+            </select>
+            <select id="ticket-term-price" class="form-control mr-1 mb-1 ticket-term" style="width: 120px">
+                <option value="">价格区间</option>
+                <option value="0-200">200元以下</option>
+                <option value="200-500">200-500元</option>
+                <option value="500-1000">500-1000元</option>
+            </select>
+            <button type="button" class="btn btn-primary" onclick="conductor.load.TicketList()">搜索</button>
+        </form>
+    </div>
+    <div id="ticket-table" class="table-box">
+        <table class="my-table">
+            <thead>
+            <tr>
+                <th>序号</th>
+                <th>预览</th>
+                <th width="22%">票券名称</th>
+                <th>种类</th>
+                <th>类型</th>
+                <th>所属景点</th>
+                <th width="15%">有效时间</th>
+                <th>价格</th>
+                <th>次数</th>
+                <th>城市</th>
+                <th>库存</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody> </tbody>
+        </table>
+        <div class="pagination"></div>
+    </div>
+    <!--购物车-->
+    <div class="cart">
+        <div class="cart-list">
+            <table class="table table-dark table-striped">
+                <thead> </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="cart-menu">
+            <button type="button" class="btn btn-primary" onclick="conductor.do.switchPage('confirm')">结算</button>
+            <button type="button" class="btn btn-danger" onclick="ask('是否确认清空购物车？',function() {
+            conductor.do.cartCtrl(0,0);
+        })">清空</button>
+        </div>
+    </div>
+
+</main>
+
+<main class="page-of-order">
+    <div class="body-search">
+        <form id="order-term-form" class="form-inline">
+            <input id="date-range11" type="text" name="date-range" class="form-control mr-1 mb-1" style="width: 220px" placeholder="请选择时间段"/>
+            <input id="search-text1111" type="text" name="title" class="form-control mr-1 mb-1" placeholder="输入要查找的关键字"/>
+            <div class="auto-term"></div>
+            <input class="btn btn-primary form-control" type="submit" value="查找"/>
+        </form>
+    </div>
+    <div id="order-table" class="table-box">
+        <table class="my-table">
+            <thead>
+            <tr>
+                <th>序号</th>
+                <th>订单号</th>
+                <th>总金额</th>
+                <th>总票数</th>
+                <th>下单时间</th>
+                <th>订单状态</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody> </tbody>
+        </table>
+        <div class="pagination"></div>
+    </div>
+</main>
+
+<main class="page-of-sold-tic">
+    <div class="body-search">
+        <form id="my-tic-term-form" class="form-inline">
+            <input id="date-range111111" type="text" name="date-range" class="form-control mr-1 mb-1" style="width: 220px" placeholder="请选择时间段"/>
+            <input id="search-text11111111" type="text" name="title" class="form-control mr-1 mb-1" placeholder="输入要查找的关键字"/>
+            <div class="auto-term"></div>
+            <input class="btn btn-primary form-control" type="submit" value="查找"/>
+        </form>
+    </div>
+    <div id="sold-tic-table" class="table-box">
+        <table class="my-table">
+            <thead>
+            <tr>
+                <th>序号</th>
+                <th>预览</th>
+                <th>票名</th>
+                <th>券码</th>
+                <th width="220px">有效时间</th>
+                <th>次数</th>
+                <th>种类</th>
+                <th>状态</th>
+                <th width="100px">购买日期</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody> </tbody>
+        </table>
+        <div class="pagination"></div>
+    </div>
+</main>
+
+<!--确认订单页面-->
+<main class="page-of-confirm">
+    <div class="body-list">
+        <div class="title-lg" style="top:8px">
+            请确认您的订单！
+        </div>
+        <div style="position:absolute;top:65px;bottom:90px;left: 20px;right: 20px">
+            <div style="background-color:#FFF;position:absolute;color: #363636;left:0;right: 280px;height: 100%;overflow-y:auto;">
+                <table id="confirm-table" class="my-table">
+                    <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>预览</th>
+                        <th width="400px">票名</th>
+                        <th width="210px">有效期</th>
+                        <th>种类</th>
+                        <th>单价</th>
+                        <th>数量</th>
+                    </tr>
+                    </thead>
+                    <tbody> </tbody>
+                </table>
+            </div>
+            <div style="padding:50px 20px 20px 20px;position:absolute;font-family:'黑体',serif;background-color:#FFF;font-size:18px;width:270px;right: 0;line-height:32px;overflow-y: auto;margin-left:10px;height:100%;float: left;color: #363636;">
+                <div class="title-lg" style="width:100%;left: 0;top:0;min-width: 0;line-height: 36px;font-size: 20px">订单信息</div>
+                支付方式：在线支付<br>
+                总票数：<b><span class="pay-num">0</span></b> 张<br>
+                原票价：<b><span class="pay-orig-price">0</span></b> 元 <br>
+                满减折扣：<b><span class="pay-save-money">0</span></b> 元<br>
+                折后价：<b><span class="pay-sale-price">0</span></b> 元<br>
+                代金券：暂无代金券<br>
+                实付款：<b style="color: red"><span class="pay-sale-price">0</span></b> 元<br>
+            </div>
+        </div>
+        <div style="font-family:'黑体',serif;bottom:10px;padding:10px;position: absolute;background-color: #FFF;left: 20px;right: 20px;overflow: hidden">
+            <button type="button" onclick="conductor.do.switchPage('ticket');" class="btn btn-info" style="float: left">返回</button>
+            <button type="button" onclick="conductor.do.createOrder();" class="btn btn-warning" style="float: right">提交</button>
+        </div>
+    </div>
+</main>
+
+<!--支付页面-->
+<main class="page-of-cashier">
+    <div class="body-list">
+        <div class="title-lg" style="top:8px;background-color: #FF5656">
+            订单已提交，请及时完成支付！
+        </div>
+        <div class="cashier">
+            <span class="cashier-span">订单总览</span>
+            <label class="cashier-tip">
+                请在
+                <span class="order-left-time order-min"> </span>
+                分
+                <span class="order-left-time order-sec"> </span>
+                秒内完成支付，超时订单将自动取消！
+            </label>
+            <table class="not-table">
+                <tbody>
+                <tr>
+                    <td>订单号：<span class="cashier-oid"> </span></td>
+                    <td>票数：<span class="cashier-tic-num"> </span> 张</td>
+                </tr>
+                <tr>
+                    <td>原价：<span class="cashier-orig-price"> </span> 元</td>
+                    <td>优惠：<span class="cashier-save-money"> </span> 元</td>
+                </tr>
+                <tr>
+                    <td>应付：<span class="cashier-sale-price"> </span> 元</td>
+                    <td>代金券：无代金券</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <hr/>
+            <span class="cashier-span">支付方式</span>
+            <label class="cashier-tip">
+                请点击以选中支付方式！
+            </label>
+            <div class="payment-block payment-select">
+                <label><input type="radio" id="cash-pay" name="payment" checked><span><img src="image/balance.png" style="height: 30px;vertical-align: -8px;margin: 0 5px">现金支付</span></label>
+                <label><input type="radio" id="weChat-pay" name="payment"><span><img src="image/wechat.png" style="height: 30px;vertical-align: -8px;margin: 0 5px">微信支付</span></label>
+                <label><input type="radio" id="ali-pay" name="payment"><span><img src="image/alipay.png" style="height: 30px;vertical-align: -8px;margin: 0 5px">支付宝</span></label>
+                <label><input type="radio" id="card-pay" name="payment"><span><img src="image/cardpay.png" style="height: 30px;vertical-align: -8px;margin: 0 5px">刷卡支付</span></label>
+            </div>
+            <hr/>
+            <span class="cashier-span change-calculate">找零计算</span>
+            <label class="cashier-tip change-calculate">
+                仅供参考，非必填
+            </label>
+            <div class="payment-block change-calculate">
+                <label>应收款：<input type="number" class="receivable border-0" value="" disabled/></label>
+                <label>实收款：<input type="number" class="payable border-0" value="" autofocus="autofocus"/></label>
+                <label>找零：<input type="text" class="odd-change border-0" value="" disabled/></label>
+            </div>
+            <hr/>
+            <div class="payment-block">
+                <span id="pay-now" class="cashier-span pay-btn" style="background-color: #31D43D">
+                    立即支付
+                </span>
+                <span class="cashier-span pay-btn" onclick="sys.delCookie('this_oid');conductor.do.switchPage('order');" style="background-color: #FF5656">
+                    退出支付
+                </span>
+            </div>
+        </div>
+    </div>
+</main>
+
+<main class="page-of-print">
+    <div class="body-search">
+        <form id="print-term-form" class="form-inline">
+            <select class="form-control mr-1 mb-1" style="width: 150px">
+                <option>打印布局：默认</option>
+                <option>默认样式1</option>
+                <option>默认样式2</option>
+                <option>新建布局</option>
+            </select>
+            <select class="form-control mr-1 mb-1" style="width: 150px">
+                <option>打印方向</option>
+                <option>横排</option>
+                <option>纵向</option>
+            </select>
+            <button type="button" class="btn btn-warning" onclick="$('.print-area').jqprint();">打印</button>
+
+        </form>
+    </div>
+
+    <div class="print-set">
+        <form id="print-set-form" class="form-inline" style="font-size: 14px">
+            <input type="text" class="form-control mr-1 mb-1" style="width: 120px" value="" placeholder="输入新布局名称"/>
+            <input type="number" onchange="$('.print-area').css('width',$(this).val()*1.6+'mm')" class="form-control mr-1 mb-1" style="width: 150px" value="" placeholder="输入打印宽度"/>
+            <input type="number" onchange="$('.print-area').css('height',$(this).val()*1.58+'mm')" class="form-control mr-1 mb-1" style="width: 150px" value="" placeholder="输入打印高度"/>
+
+            <select id="qrcode-width" onchange="$('#qrcode').width($(this).children('option:selected').val());$('#qrcode').height($(this).children('option:selected').val());" class="form-control mr-1 mb-1" style="width: 200px">
+                <option value="100">二维码大小:默认</option>
+                <option value="50">迷你（50）</option>
+                <option value="100">小（100）</option>
+                <option value="150">中（150）</option>
+                <option value="200">大（200）</option>
+                <option value="300">超大（300）</option>
+            </select>
+            <select id="tb-font-size" onchange="$('.print-table').css('font-size',$(this).children('option:selected').val()+'px');" class="form-control mr-1 mb-1" style="width: 150px">
+                <option value="16">字体大小:默认</option>
+                <option value="12">迷你（12px）</option>
+                <option value="14">小（14px）</option>
+                <option value="16">中（16px）</option>
+                <option value="18">大（18px）</option>
+                <option value="22">超大（22px）</option>
+            </select>
+            <select id="tb-line-height" onchange="$('.print-table').css('line-height',$(this).children('option:selected').val()+'px');" class="form-control mr-1 mb-1" style="width: 150px">
+                <option value="20">行高:默认</option>
+                <option value="16">迷你（16px）</option>
+                <option value="20">小（20px）</option>
+                <option value="30">中（30px）</option>
+                <option value="40">大（40px）</option>
+                <option value="50">超大（50px）</option>
+            </select>
+
+
+
+        </form>
+        <div class="form-check">
+            <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" onchange="$('.print-key').toggle()" value="" checked>
+                <span> </span>显示前缀
+            </label>
+            <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" onchange="$('.print-title').toggle()" value="" checked>
+                <span> </span>显示标题
+            </label>
+            <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" onchange="$('.print-KEY').toggle()" value="" checked>
+                <span> </span>显示券码
+            </label>
+            <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" onchange="$('.print-date-range').toggle()" value="" checked>
+                <span> </span>有效时间
+            </label>
+            <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" onchange="$('.print-date').toggle()" value="" checked>
+                <span> </span>打印时间
+            </label>
+        </div>
+    </div>
+
+    <label class="mb-1" style="font-size: 14px">提示：打印范围大约为白色虚线区域</label>
+    <div class="print-box">
+        <div class="print-area">
+            <div id="qrcode" onmousedown="move(event,this)"> </div>
+            <div id="print-info" onmousedown="move(event,this)">
+                <table class="print-table"> </table>
+            </div>
+        </div>
+    </div>
+
+
+</main>
+
+<footer>
+
+</footer>
+<script>
+    $(function () {
+        //IE浏览器不兼容弹窗
+        if (!!window.ActiveXObject || "ActiveXObject" in window){
+            alert("暂不兼容IE浏览器，请使用主流浏览器极速模式！");
+        }
+        $("menu ul li").click(function () {
+            $(this).parent("ul").children("li").removeClass("active");
+            $(this).addClass("active");
+        });
+        loading();
+        //初始化是否切换到特定页面
+        conductor.do.switchPage();
+        if (sys.getCookie("page")){
+            //customer.do.switchPage(sys.getCookie("page"));
+            $(".menu-of-" + sys.getCookie("page")).click();
+        }
+
+        conductor.load.SysSet();
+        conductor.load.UserInfo();
+        conductor.load.CartList();
+
+        setTimeout(function () {
+            endLoading();
+        },500);
+
+        //执行一个laydate实例
+        laydate.render({
+            elem:'#ticket-date-range',
+            type:'date',
+            format:'yyyy/MM/dd',
+            range:true
+        });
+        /*票券搜索条件改变时自动进行搜索*/
+        $(".ticket-term").on("change",function () {
+            conductor.load.TicketList();
+        });
+
+        /*键盘enter事件*/
+        $(document).keydown(function (e) {
+            if (e.keyCode === 13){
+                switch (conductor.page){
+                    case "ticket":
+                        conductor.do.switchPage('confirm');
+                        break;
+                    case "confirm":
+                        conductor.do.createOrder();
+                        break;
+                    case "cashier":
+                        $("#pay-now").click();
+                        break;
+                    default:
+                        break;
+                }
+            }
+        });
+        /*输入实际收款事件*/
+        $(".payable").on("input",function () {
+            let receivable = $('.receivable').val(),
+                payable = $('.payable').val(),
+                oddChange = Math.formatFloat(payable-receivable,2);
+            oddChange = Math.floor(oddChange * 10) / 10;
+            $(".odd-change").val("");
+            if (payable === ""){
+                return;
+            }
+            if (oddChange >= 0 ){
+                $(".odd-change").val(oddChange);
+            }else{
+                $(".odd-change").val("收款不足！");
+            }
+        });
+        /*改变支付方式事件*/
+        $(".payment-select label input").on("change",function () {
+            if ($(".payment-select label #cash-pay").is(":checked")){
+                $(".change-calculate").show();
+            }else{
+                $(".change-calculate").hide();
+            }
+        });
+        /*判断是否可以立即支付*/
+        $("#pay-now").click(function () {
+            let oddChange = $(".odd-change").val();
+            if (oddChange === "" || oddChange * 1 >= 0) {
+                conductor.do.payOrder();
+            }else{
+                warn("必须收齐款项方可支付！")
+            }
+        });
+
+    });
+</script>
+</body>
+</html>

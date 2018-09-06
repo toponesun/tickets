@@ -1,0 +1,89 @@
+.item-list{
+    overflow: auto;
+    padding-bottom: 10px;
+}
+
+.tickets-item{
+    width: 24%;
+    overflow: hidden;
+    background-color: #FFF;
+    color: #333;
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+    position: relative;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.tickets-item:hover{
+    box-shadow: 0 0 20px 1px #F08000;
+    color: #F08000;
+}
+.tickets-img{
+    width: 100%;
+    height: 150px;
+}
+.tickets-img img{
+    width: 100%;
+    height: 100%;
+}
+.tickets-info{
+    width: 100%;
+    overflow: hidden;
+    padding: 5px 10px 0 10px;
+}
+.tickets-name{
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 26px;
+}
+.tickets-price{
+    color: #333;
+    line-height: 36px;
+}
+.tickets-price span{
+    color: #F08000;
+    font-family: "Arial", serif;
+    font-size: 16px;
+}
+.tickets-price span b{
+    font-size: 26px;
+}
+.tickets-href{
+    position: absolute;right: 8px;
+    bottom: 8px;
+}
+.body-search label{
+    background: #4B6E96;
+    color: #FFF;
+    height: 32px;
+    padding: 0 10px;
+    margin-right: -10px;
+    font-weight: lighter;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 32px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+.tickets-main{
+    width: 100%;
+    padding: 20px;
+    overflow: hidden;
+}
+.tickets-view{
+    background: #FFF;
+    height: 200px;
+    border: solid 0.5px #CCC;
+    padding: 10px 20px;
+}
+.tickets-title{
+    width: 100%;
+    font-size: 22px;
+    line-height: 42px;
+    border-bottom: solid 0.5px #CCC;
+    font-family: "微软雅黑", serif;
+}
+

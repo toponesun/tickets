@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>用户登录</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/md5.js"></script>
+    <style type="text/css">
+        body{
+            font-size:16px;
+            background-image: url("image/bg.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center center;
+            -webkit-text-size-adjust:none;
+        }
+        .login{
+            position: absolute;
+            padding:20px 40px;
+            top:50%;
+            left: 50%;
+            width: 50%;
+            min-width: 300px;
+            max-width: 400px;
+            color: #FFF;
+            transform: translateX(-50%)translateY(-75%);
+            background-color: #5bc0de;
+            border-radius:5px;
+            opacity: 0.9;
+        }
+        .welcome{
+            text-align: center;
+            width: 100%;
+            font-size: 24px;
+            padding: 15px 0;
+            font-family: "黑体", serif;
+        }
+        .more{
+            position: absolute;right: 0;top:0;padding:10px;cursor: pointer
+        }
+        .more img{
+            height: 16px;
+            vertical-align: -2px;
+        }
+        .client-list{
+            position: absolute;
+            right: -100px;
+            top: 0;color: #333;
+            width: 90px;
+            border-radius: 5px;
+            display: none;
+        }
+        .client-name{
+            font-size: 16px;padding: 0 10px;
+        }
+        .captcha{
+            width: 100px;
+            cursor: pointer;
+            height: 38px;
+            padding: 4px 35px;
+            margin-right: 5px;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-color: #CCC;
+            border: solid 1px #FFF;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            overflow: hidden;
+        }
+        .loading{
+            width: 28px;
+            height: 28px;
+            border-radius: 50px;
+            border: solid 5px #FFF;
+            border-bottom: solid 5px #5bc0de;
+            animation: cyc 0.5s infinite;
+            display: none;
+        }
+        @media only screen and (max-width: 500px) {
+            .login{
+                width: 85%;padding: 10px 30px;
+            }
+            .client-list{
+                margin-top: 10px;top: 100%;left:0;width: 100%;
+            }
+            .client{
+                width: 49%;
+            }
+        }
+        @media only screen and (max-height: 400px) {
+            .login{
+                transform: translateX(-50%)translateY(-50%);
+            }
+        }
+        @keyframes down {
+            0%{transform: rotate(0deg)}
+            100%{transform: rotate(90deg)}
+        }
+        @keyframes up {
+            0%{transform: rotate(90deg)}
+            100%{transform: rotate(0deg)}
+        }
+        @keyframes to-customer {
+            to{background-color: #5bc0de}
+        }
+        @keyframes to-conductor {
+            to{background-color: #449d44}
+        }
+        @keyframes to-business {
+            to{background-color: #d9534f}
+        }
+        @keyframes to-admin {
+            to{background-color: #337ab7}
+        }
+        @keyframes cyc {
+            0%{transform: rotate(0deg)}
+            100%{transform: rotate(360deg)}
+        }
+    </style>
+</head>
+<body>
+
+<div class="login">
+    <div class="more">
+        更多<img src="image/menu-out.png"/>
+    </div>
+    <div class="client-list">
+        <button type="button" class="btn btn-info mb-1 client" onclick="transClient('customer')">客户端</button>
+        <button type="button" class="btn btn-success mb-1 client" onclick="transClient('conductor')">售票端</button>
+        <button type="button" class="btn btn-danger mb-1 client" onclick="transClient('business')">商家端</button>
+        <button type="button" class="btn btn-primary mb-1 client" onclick="transClient('admin')">管理端</button>
+    </div>
+    <div class="welcome">欢迎登录<span class="client-name">客户端</span></div>
+    <div class="form-area">
+        <form class="login-form">
+            <input type="hidden" id="client" name="client" value="customer"/>
+            <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">账户</span>
+                </div>
+                <input type="text" class="form-control" placeholder="请输入用户名" id="username" name="username">
+            </div>
+            <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">密码</span>
+                </div>
+                <input type="password" class="form-control" placeholder="请输入密码" id="password" name="password">
+            </div>
+            <div class="input-group mb-2">
+                <div class="input-group-append">
+                    <div class="captcha" title="看不清，换一张">
+                        <div class="loading"></div>
+                    </div>
+                </div>
+                <input type="text" class="form-control" placeholder="请输入验证码" id="captcha" name="captcha">
+            </div>
+            <button type="submit" class="btn btn-light float-right">登录</button>
+            <button type="reset" class="btn btn-light float-right mr-2">重置</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        var flag;
+        if (!!window.ActiveXObject || "ActiveXObject" in window){
+            alert("暂不兼容IE浏览器，请使用主流浏览器极速模式！");
+        }
+        $(".more").on("click",function () {
+            var area = $('.client-list');
+            var img = $(".more img");
+            if (area.is(":hidden")) {
+                img.css({"animation":"down 0.5s","animation-fill-mode":"forwards"});
+            }else{
+                img.css({"animation":"up 0.5s","animation-fill-mode":"forwards"});
+            }
+            area.slideToggle(300);
+        });
+        $(".captcha").click(function () {
+            $(".loading").fadeIn(200);
+            clearTimeout(flag);
+            flag = setTimeout(function () {
+                $(".captcha").css("background-image","url('api/get_login_captcha.php?v="+Math.random()+"')");
+                $(".loading").fadeOut(200);
+            },300);
+        });
+        $(".captcha").click();
+        $(".login-form").submit(function () {
+            var client = $("#client").val(),
+                username = $("#username").val(),
+                password = $("#password").val(),
+                captcha = $("#captcha").val();
+
+            if (!username && !password && !captcha){
+                alert("用户名密码和验证码不允许为空！");
+                return false;
+            }
+
+            password = hex_md5(hex_md5(password) + captcha);
+            $("#password").val(password);
+
+            $.ajax({
+                type:"post",
+                url:"api/index.php",
+                data:{
+                    "act": "login",
+                    "username": username,
+                    "password": password,
+                    "captcha": captcha,
+                    "client": client
+                },
+                dataType:"json",
+                success:function (o) {
+                    if (o.code == 1){
+                        window.location.href = o.data.url;
+                    }else{
+                        alert(o.msg);
+                        $(".captcha").click();
+                        $("#password").val("");
+                        $("#captcha").val("");
+                    }
+                },
+                error:function(XMLHttpRequest, textStatus, errorThrown){
+                    alert("服务器未响应！" + textStatus);
+                }
+            });
+            return false;
+        })
+    });
+    function transClient(client) {
+        let log_div = $(".login"),back_cor,
+            to_name,client_div = $("#client"),
+            client_name,client_name_div = $(".client-name");
+        switch (client){
+            case "customer":
+                back_cor = "#5bc0de";
+                to_name = "to-customer";
+                client_name = "客户端";
+                break;
+            case "conductor":
+                back_cor = "#449d44";
+                to_name = "to-conductor";
+                client_name = "售票端";
+                break;
+            case "business":
+                back_cor = "#d9534f";
+                to_name = "to-business";
+                client_name = "商家端";
+                break;
+            case "admin":
+                back_cor = "#337ab7";
+                to_name = "to-admin";
+                client_name = "管理端";
+                break;
+            default:
+                return;
+        }
+        log_div.css({"animation":to_name +" 1s","animation-fill-mode":"forwards"});
+        setTimeout(function () {
+            log_div.css("background-color",back_cor);
+        },1000);
+        client_div.val(client);
+        client_name_div.html(client_name)
+    }
+
+</script>
+
+</body>
+</html>

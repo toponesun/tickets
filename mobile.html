@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>主页_在线订票系统</title>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/qrcode.min.js"></script>
+    <script src="js/highcharts.js"></script>
+    <script src="js/base.js"></script>
+    <script src="js/mobile.js"></script>
+</head>
+<body>
+<div class="hidden-area">
+    <div class="cover-10"></div>
+    <div class="cover-90"></div>
+    <div class="body-alert">
+        <div class="body-alert-img"><img src="image/yes.png"></div>
+        <div class="body-alert-text">alert-area</div>
+    </div>
+    <div class="body-ask">
+        <div class="body-ask-img"><img src="image/warn.png"></div>
+        <div class="body-ask-text">ask area</div>
+        <div class="body-ask-true" onclick="closeAsk()">确定</div>
+        <div class="body-ask-false" onclick="closeAsk()">取消</div>
+    </div>
+</div>
+<div class="body-top">
+    <input type="text" id="search" onfocus="area_show('search-area')" onblur="area_show()" maxlength="20" class="search" placeholder="输入你要查找的内容">
+    <div class="search-touch" onclick="search();">搜索</div>
+</div>
+
+<div class="body-main" style="">
+    <div class="search-area" hidden="">
+
+        <div style="font: 0/0 sans-serif;clear: both;display: block"> </div>
+    </div>
+    <div class="card-list">
+        <div class="swiper-container swiper-container-horizontal swiper-container-ios">
+            <div class="swiper-wrapper">            <div class="swiper-slide swiper-slide-active" style="width: 375px;">
+                <img class="swiper-lazy swiper-lazy-loaded" onclick="go('www.baidu.com');" src="pictures/scenic/P201805090001/index.jpg">
+
+                <div class="swiper-title">标题1</div>
+            </div>            <div class="swiper-slide swiper-slide-next" style="width: 375px;">
+                <img data-src="pictures/scenic/P201805090002/index.jpg" class="swiper-lazy" onclick="">
+                <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+
+            </div></div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination swiper-pagination-bullets"><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span class="swiper-pagination-bullet"></span></div>
+            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+        <script>
+            let mySwiper = new Swiper ('.swiper-container', {
+                lazy:true,
+                // 如果需要分页器
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+            })
+        </script>
+        <div class="main-title" style="border:none;font-size: 24px;text-align: center;color: #02879B;line-height: 36px">我的消费统计</div>
+        <div id="container1" class="chart" style="height: 300px;padding: 0 10px;margin-top: 10px" data-highcharts-chart="0"><div id="highcharts-eqn5nvw-0" class="highcharts-container " style="position: relative; overflow: hidden; width: 355px; height: 300px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><svg version="1.1" class="highcharts-root" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif;font-size:12px;" xmlns="http://www.w3.org/2000/svg" width="355" height="300"><desc>Created with Highcharts 5.0.6</desc><defs><clipPath id="highcharts-eqn5nvw-1"><rect x="0" y="0" width="268" height="179" fill="none"></rect></clipPath></defs><rect fill="#ffffff" class="highcharts-background" x="0" y="0" width="355" height="300" rx="0" ry="0"></rect><rect fill="none" class="highcharts-plot-background" x="77" y="47" width="268" height="179"></rect><g class="highcharts-grid highcharts-xaxis-grid "><path fill="none" class="highcharts-grid-line" d="M 160.5 47 L 160.5 226" opacity="1"></path><path fill="none" class="highcharts-grid-line" d="M 251.5 47 L 251.5 226" opacity="1"></path><path fill="none" class="highcharts-grid-line" d="M 341.5 47 L 341.5 226" opacity="1"></path></g><g class="highcharts-grid highcharts-yaxis-grid "><path fill="none" stroke="#e6e6e6" stroke-width="1" class="highcharts-grid-line" d="M 77 226.5 L 345 226.5" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="1" class="highcharts-grid-line" d="M 77 166.5 L 345 166.5" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="1" class="highcharts-grid-line" d="M 77 107.5 L 345 107.5" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="1" class="highcharts-grid-line" d="M 77 46.5 L 345 46.5" opacity="1"></path></g><rect fill="none" class="highcharts-plot-border" x="77" y="47" width="268" height="179"></rect><g class="highcharts-axis highcharts-xaxis "><path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 160.5 226 L 160.5 236" opacity="1"></path><path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 251.5 226 L 251.5 236" opacity="1"></path><path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 341.5 226 L 341.5 236" opacity="1"></path><path fill="none" class="highcharts-axis-line" stroke="#ccd6eb" stroke-width="1" d="M 77 226.5 L 345 226.5"></path></g><g class="highcharts-axis highcharts-yaxis "><text x="24" text-anchor="middle" transform="translate(0,0) rotate(270 24 136.5)" class="highcharts-axis-title" style="color:#666666;fill:#666666;" y="136.5">金额</text><path fill="none" class="highcharts-axis-line" d="M 77 47 L 77 226"></path></g><g class="highcharts-series-group"><g class="highcharts-series highcharts-series-0 highcharts-area-series highcharts-color-0 " transform="translate(77,47) scale(1 1)" clip-path="url(#highcharts-eqn5nvw-1)" width="179" height="268"><path fill="rgba(124,181,236,0.75)" d="M 2.6274509803922 179 L 11.687626774848 161.1 L 20.747802569304 179 L 29.807978363759 179 L 38.868154158215 179 L 47.928329952671 179 L 56.988505747126 179 L 66.048681541582 179 L 75.108857336038 51.43266666666666 L 84.169033130494 179 L 93.229208924949 179 L 102.28938471941 179 L 111.34956051386 179 L 120.40973630832 143.02100000000002 L 129.46991210277 179 L 138.53008789723 179 L 147.59026369168 179 L 156.65043948614 143.67733333333334 L 165.7106152806 179 L 174.77079107505 179 L 183.83096686951 179 L 192.89114266396 179 L 201.95131845842 179 L 211.01149425287 179 L 220.07167004733 179 L 229.13184584179 179 L 238.19202163624 179 L 247.2521974307 179 L 256.31237322515 179 L 265.37254901961 179 L 265.37254901961 179 L 256.31237322515 179 L 247.2521974307 179 L 238.19202163624 179 L 229.13184584179 179 L 220.07167004733 179 L 211.01149425287 179 L 201.95131845842 179 L 192.89114266396 179 L 183.83096686951 179 L 174.77079107505 179 L 165.7106152806 179 L 156.65043948614 179 L 147.59026369168 179 L 138.53008789723 179 L 129.46991210277 179 L 120.40973630832 179 L 111.34956051386 179 L 102.28938471941 179 L 93.229208924949 179 L 84.169033130494 179 L 75.108857336038 179 L 66.048681541582 179 L 56.988505747126 179 L 47.928329952671 179 L 38.868154158215 179 L 29.807978363759 179 L 20.747802569304 179 L 11.687626774848 179 L 2.6274509803922 179" class="highcharts-area"></path><path fill="none" d="M 2.6274509803922 179 L 11.687626774848 161.1 L 20.747802569304 179 L 29.807978363759 179 L 38.868154158215 179 L 47.928329952671 179 L 56.988505747126 179 L 66.048681541582 179 L 75.108857336038 51.43266666666666 L 84.169033130494 179 L 93.229208924949 179 L 102.28938471941 179 L 111.34956051386 179 L 120.40973630832 143.02100000000002 L 129.46991210277 179 L 138.53008789723 179 L 147.59026369168 179 L 156.65043948614 143.67733333333334 L 165.7106152806 179 L 174.77079107505 179 L 183.83096686951 179 L 192.89114266396 179 L 201.95131845842 179 L 211.01149425287 179 L 220.07167004733 179 L 229.13184584179 179 L 238.19202163624 179 L 247.2521974307 179 L 256.31237322515 179 L 265.37254901961 179" class="highcharts-graph" stroke="#7cb5ec" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path><path fill="none" d="M -22.3725490196078 179 L 2.6274509803922 179 L 11.687626774848 161.1 L 20.747802569304 179 L 29.807978363759 179 L 38.868154158215 179 L 47.928329952671 179 L 56.988505747126 179 L 66.048681541582 179 L 75.108857336038 51.43266666666666 L 84.169033130494 179 L 93.229208924949 179 L 102.28938471941 179 L 111.34956051386 179 L 120.40973630832 143.02100000000002 L 129.46991210277 179 L 138.53008789723 179 L 147.59026369168 179 L 156.65043948614 143.67733333333334 L 165.7106152806 179 L 174.77079107505 179 L 183.83096686951 179 L 192.89114266396 179 L 201.95131845842 179 L 211.01149425287 179 L 220.07167004733 179 L 229.13184584179 179 L 238.19202163624 179 L 247.2521974307 179 L 256.31237322515 179 L 265.37254901961 179 L 290.37254901961 179" stroke-linejoin="round" visibility="visible" stroke="rgba(192,192,192,0.0001)" stroke-width="52" class="highcharts-tracker"></path></g><g class="highcharts-markers highcharts-series-0 highcharts-area-series highcharts-color-0 highcharts-tracker" transform="translate(77,47) scale(1 1)" clip-path="url(#highcharts-eqn5nvw-2)" width="179" height="268"></g></g><text x="178" text-anchor="middle" class="highcharts-title" style="color:#333333;font-size:18px;fill:#333333;width:291px;" y="24"><tspan>最近30天消费趋势</tspan></text><g class="highcharts-legend" transform="translate(126,259)"><rect fill="none" class="highcharts-legend-box" rx="0" ry="0" x="0" y="0" width="104" height="26" visibility="visible"></rect><g><g><g class="highcharts-legend-item highcharts-area-series highcharts-color-0 highcharts-series-0" transform="translate(8,3)"><text x="21" style="color:#333333;font-size:12px;font-weight:bold;cursor:pointer;fill:#333333;" text-anchor="start" y="15">时间-&gt;最近</text><rect x="2" y="4" width="12" height="12" fill="#7cb5ec" rx="6" ry="6" class="highcharts-point"></rect></g></g></g></g><g class="highcharts-axis-labels highcharts-xaxis-labels "><text x="161.16903313049357" style="color:#666666;cursor:default;font-size:11px;fill:#666666;width:124px;text-overflow:clip;" text-anchor="middle" transform="translate(0,0)" y="245" opacity="1"><tspan>10</tspan></text><text x="251.77079107505074" style="color:#666666;cursor:default;font-size:11px;fill:#666666;width:124px;text-overflow:clip;" text-anchor="middle" transform="translate(0,0)" y="245" opacity="1"><tspan>20</tspan></text><text x="338" style="color:#666666;cursor:default;font-size:11px;fill:#666666;width:124px;text-overflow:clip;" text-anchor="middle" transform="translate(0,0)" y="245" opacity="1"><tspan>30</tspan></text></g><g class="highcharts-axis-labels highcharts-yaxis-labels "><text x="62" style="color:#666666;cursor:default;font-size:11px;fill:#666666;width:107px;text-overflow:clip;" text-anchor="end" transform="translate(0,0)" y="230" opacity="1"><tspan>0</tspan></text><text x="62" style="color:#666666;cursor:default;font-size:11px;fill:#666666;width:107px;text-overflow:clip;" text-anchor="end" transform="translate(0,0)" y="171" opacity="1"><tspan>1000</tspan></text><text x="62" style="color:#666666;cursor:default;font-size:11px;fill:#666666;width:107px;text-overflow:clip;" text-anchor="end" transform="translate(0,0)" y="111" opacity="1"><tspan>2000</tspan></text><text x="62" style="color:#666666;cursor:default;font-size:11px;fill:#666666;width:107px;text-overflow:clip;" text-anchor="end" transform="translate(0,0)" y="51" opacity="1"><tspan>3000</tspan></text></g></svg></div></div>
+        <div id="container2" class="chart" style="height: 300px;padding: 0 10px;margin-top: 10px" data-highcharts-chart="1"><div id="highcharts-eqn5nvw-4" class="highcharts-container " style="position: relative; overflow: hidden; width: 355px; height: 300px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><svg version="1.1" class="highcharts-root" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif;font-size:12px;" xmlns="http://www.w3.org/2000/svg" width="355" height="300"><desc>Created with Highcharts 5.0.6</desc><defs><clipPath id="highcharts-eqn5nvw-5"><rect x="0" y="0" width="288" height="179" fill="none"></rect></clipPath></defs><rect fill="#ffffff" class="highcharts-background" x="0" y="0" width="355" height="300" rx="0" ry="0"></rect><rect fill="none" class="highcharts-plot-background" x="57" y="47" width="288" height="179"></rect><g class="highcharts-grid highcharts-xaxis-grid "><path fill="none" class="highcharts-grid-line" d="M 146.5 47 L 146.5 226" opacity="1"></path><path fill="none" class="highcharts-grid-line" d="M 244.5 47 L 244.5 226" opacity="1"></path><path fill="none" class="highcharts-grid-line" d="M 341.5 47 L 341.5 226" opacity="1"></path></g><g class="highcharts-grid highcharts-yaxis-grid "><path fill="none" stroke="#e6e6e6" stroke-width="1" class="highcharts-grid-line" d="M 57 226.5 L 345 226.5" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="1" class="highcharts-grid-line" d="M 57 166.5 L 345 166.5" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="1" class="highcharts-grid-line" d="M 57 107.5 L 345 107.5" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="1" class="highcharts-grid-line" d="M 57 46.5 L 345 46.5" opacity="1"></path></g><rect fill="none" class="highcharts-plot-border" x="57" y="47" width="288" height="179"></rect><g class="highcharts-axis highcharts-xaxis "><path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 146.5 226 L 146.5 236" opacity="1"></path><path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 244.5 226 L 244.5 236" opacity="1"></path><path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 341.5 226 L 341.5 236" opacity="1"></path><path fill="none" class="highcharts-axis-line" stroke="#ccd6eb" stroke-width="1" d="M 57 226.5 L 345 226.5"></path></g><g class="highcharts-axis highcharts-yaxis "><text x="24.5" text-anchor="middle" transform="translate(0,0) rotate(270 24.5 136.5)" class="highcharts-axis-title" style="color:#666666;fill:#666666;" y="136.5">张数</text><path fill="none" class="highcharts-axis-line" d="M 57 47 L 57 226"></path></g><g class="highcharts-series-group"><g class="highcharts-series highcharts-series-0 highcharts-area-series highcharts-color-0 " transform="translate(57,47) scale(1 1)" clip-path="url(#highcharts-eqn5nvw-5)" width="179" height="288"><path fill="rgba(124,181,236,0.75)" d="M 2.8235294117647 179 L 12.559837728195 179 L 22.296146044625 179 L 32.032454361055 179 L 41.768762677485 179 L 51.505070993915 179 L 61.241379310345 179 L 70.977687626775 179 L 80.713995943205 179 L 90.450304259635 179 L 100.18661257606 179 L 109.92292089249 179 L 119.65922920892 179 L 129.39553752535 179 L 139.13184584178 179 L 148.86815415822 179 L 158.60446247465 179 L 168.34077079108 59.66666666666667 L 178.07707910751 179 L 187.81338742394 179 L 197.54969574037 179 L 207.2860040568 179 L 217.02231237323 179 L 226.75862068966 179 L 236.49492900609 179 L 246.23123732252 179 L 255.96754563895 179 L 265.70385395538 179 L 275.44016227181 179 L 285.17647058824 179 L 285.17647058824 179 L 275.44016227181 179 L 265.70385395538 179 L 255.96754563895 179 L 246.23123732252 179 L 236.49492900609 179 L 226.75862068966 179 L 217.02231237323 179 L 207.2860040568 179 L 197.54969574037 179 L 187.81338742394 179 L 178.07707910751 179 L 168.34077079108 179 L 158.60446247465 179 L 148.86815415822 179 L 139.13184584178 179 L 129.39553752535 179 L 119.65922920892 179 L 109.92292089249 179 L 100.18661257606 179 L 90.450304259635 179 L 80.713995943205 179 L 70.977687626775 179 L 61.241379310345 179 L 51.505070993915 179 L 41.768762677485 179 L 32.032454361055 179 L 22.296146044625 179 L 12.559837728195 179 L 2.8235294117647 179" class="highcharts-area"></path><path fill="none" d="M 2.8235294117647 179 L 12.559837728195 179 L 22.296146044625 179 L 32.032454361055 179 L 41.768762677485 179 L 51.505070993915 179 L 61.241379310345 179 L 70.977687626775 179 L 80.713995943205 179 L 90.450304259635 179 L 100.18661257606 179 L 109.92292089249 179 L 119.65922920892 179 L 129.39553752535 179 L 139.13184584178 179 L 148.86815415822 179 L 158.60446247465 179 L 168.34077079108 59.66666666666667 L 178.07707910751 179 L 187.81338742394 179 L 197.54969574037 179 L 207.2860040568 179 L 217.02231237323 179 L 226.75862068966 179 L 236.49492900609 179 L 246.23123732252 179 L 255.96754563895 179 L 265.70385395538 179 L 275.44016227181 179 L 285.17647058824 179" class="highcharts-graph" stroke="#7cb5ec" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path><path fill="none" d="M -22.1764705882353 179 L 2.8235294117647 179 L 12.559837728195 179 L 22.296146044625 179 L 32.032454361055 179 L 41.768762677485 179 L 51.505070993915 179 L 61.241379310345 179 L 70.977687626775 179 L 80.713995943205 179 L 90.450304259635 179 L 100.18661257606 179 L 109.92292089249 179 L 119.65922920892 179 L 129.39553752535 179 L 139.13184584178 179 L 148.86815415822 179 L 158.60446247465 179 L 168.34077079108 59.66666666666667 L 178.07707910751 179 L 187.81338742394 179 L 197.54969574037 179 L 207.2860040568 179 L 217.02231237323 179 L 226.75862068966 179 L 236.49492900609 179 L 246.23123732252 179 L 255.96754563895 179 L 265.70385395538 179 L 275.44016227181 179 L 285.17647058824 179 L 310.17647058824 179" stroke-linejoin="round" visibility="visible" stroke="rgba(192,192,192,0.0001)" stroke-width="52" class="highcharts-tracker"></path></g><g class="highcharts-markers highcharts-series-0 highcharts-area-series highcharts-color-0 highcharts-tracker" transform="translate(57,47) scale(1 1)" clip-path="url(#highcharts-eqn5nvw-6)" width="179" height="288"></g></g><text x="178" text-anchor="middle" class="highcharts-title" style="color:#333333;font-size:18px;fill:#333333;width:291px;" y="24"><tspan>最近30天购票趋势</tspan></text><g class="highcharts-legend" transform="translate(126,259)"><rect fill="none" class="highcharts-legend-box" rx="0" ry="0" x="0" y="0" width="104" height="26" visibility="visible"></rect><g><g><g class="highcharts-legend-item highcharts-area-series highcharts-color-0 highcharts-series-0" transform="translate(8,3)"><text x="21" style="color:#333333;font-size:12px;font-weight:bold;cursor:pointer;fill:#333333;" text-anchor="start" y="15">时间-&gt;最近</text><rect x="2" y="4" width="12" height="12" fill="#7cb5ec" rx="6" ry="6" class="highcharts-point"></rect></g></g></g></g><g class="highcharts-axis-labels highcharts-xaxis-labels "><text x="147.4503042596349" style="color:#666666;cursor:default;font-size:11px;fill:#666666;width:134px;text-overflow:clip;" text-anchor="middle" transform="translate(0,0)" y="245" opacity="1"><tspan>10</tspan></text><text x="244.8133874239351" style="color:#666666;cursor:default;font-size:11px;fill:#666666;width:134px;text-overflow:clip;" text-anchor="middle" transform="translate(0,0)" y="245" opacity="1"><tspan>20</tspan></text><text x="338" style="color:#666666;cursor:default;font-size:11px;fill:#666666;width:134px;text-overflow:clip;" text-anchor="middle" transform="translate(0,0)" y="245" opacity="1"><tspan>30</tspan></text></g><g class="highcharts-axis-labels highcharts-yaxis-labels "><text x="42" style="color:#666666;cursor:default;font-size:11px;fill:#666666;width:107px;text-overflow:clip;" text-anchor="end" transform="translate(0,0)" y="230" opacity="1"><tspan>0</tspan></text><text x="42" style="color:#666666;cursor:default;font-size:11px;fill:#666666;width:107px;text-overflow:clip;" text-anchor="end" transform="translate(0,0)" y="171" opacity="1"><tspan>1</tspan></text><text x="42" style="color:#666666;cursor:default;font-size:11px;fill:#666666;width:107px;text-overflow:clip;" text-anchor="end" transform="translate(0,0)" y="111" opacity="1"><tspan>2</tspan></text><text x="42" style="color:#666666;cursor:default;font-size:11px;fill:#666666;width:107px;text-overflow:clip;" text-anchor="end" transform="translate(0,0)" y="51" opacity="1"><tspan>3</tspan></text></g></svg></div></div>
+        <div id="container3" class="chart" style="height: 300px;padding: 0 10px;margin-top: 10px" data-highcharts-chart="2"><div id="highcharts-eqn5nvw-8" class="highcharts-container " style="position: relative; overflow: hidden; width: 355px; height: 300px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><svg version="1.1" class="highcharts-root" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif;font-size:12px;" xmlns="http://www.w3.org/2000/svg" width="355" height="300"><desc>Created with Highcharts 5.0.6</desc><defs><clipPath id="highcharts-eqn5nvw-9"><rect x="0" y="0" width="335" height="238" fill="none"></rect></clipPath></defs><rect fill="#ffffff" class="highcharts-background" x="0" y="0" width="355" height="300" rx="0" ry="0"></rect><rect fill="none" class="highcharts-plot-background" x="10" y="47" width="335" height="238"></rect><rect fill="none" class="highcharts-plot-border" x="10" y="47" width="335" height="238"></rect><g class="highcharts-series-group"><g class="highcharts-series highcharts-series-0 highcharts-pie-series highcharts-color-undefined highcharts-tracker" transform="translate(10,47) scale(1 1)" style="cursor:pointer;"><path fill="#7cb5ec" d="M 206.98584471234318 49.50000144152641 A 69.5 69.5 0 1 1 206.90346589430402 49.50006704200041 L 207 119 A 0 0 0 1 0 207 119 Z" class="highcharts-point highcharts-color-0" stroke="#ffffff" stroke-width="1" stroke-linejoin="round"></path><path fill="#90ed7d" d="M 206.97296586394577 49.50000525787439 A 69.5 69.5 0 0 1 206.90346589430402 49.50006704200041 L 207 119 A 0 0 0 0 0 207 119 Z" class="highcharts-point highcharts-color-1" stroke="#ffffff" stroke-width="1" stroke-linejoin="round"></path><path fill="#f7a35c" d="M 206.97296586394577 49.50000525787439 A 69.5 69.5 0 0 1 206.90346589430402 49.50006704200041 L 207 119 A 0 0 0 0 0 207 119 Z" class="highcharts-point highcharts-color-2" stroke="#ffffff" stroke-width="1" stroke-linejoin="round"></path><path fill="#8085e9" d="M 206.97296586394577 49.50000525787439 A 69.5 69.5 0 0 1 206.90346589430402 49.50006704200041 L 207 119 A 0 0 0 0 0 207 119 Z" class="highcharts-point highcharts-color-3" stroke="#ffffff" stroke-width="1" stroke-linejoin="round"></path></g><g class="highcharts-markers highcharts-series-0 highcharts-pie-series highcharts-color-undefined " transform="translate(10,47) scale(1 1)"></g></g><text x="178" text-anchor="middle" class="highcharts-title" style="color:#333333;font-size:18px;fill:#333333;width:291px;" y="24"><tspan>最近30天购票单价</tspan></text><g class="highcharts-data-labels highcharts-series-0 highcharts-pie-series highcharts-color-undefined highcharts-tracker" transform="translate(10,47) scale(1 1)" opacity="1" style="cursor:pointer;"><path fill="none" class="highcharts-data-label-connector highcharts-color-0" stroke="#7cb5ec" stroke-width="1" d="M 212 218.5 C 207 218.5 207 200.5 207 194.5 L 207 188.5"></path><path fill="none" class="highcharts-data-label-connector highcharts-color-1" stroke="#90ed7d" stroke-width="1" d="M 202 19.5 C 207 19.5 207 37.5 207 43.5 L 207 49.5"></path><path fill="none" class="highcharts-data-label-connector highcharts-color-2" stroke="#f7a35c" stroke-width="1" d="M 137.77967611417705 43 C 142.77967611417705 43 207 37.5 207 43.5 L 207 49.5"></path><path fill="none" class="highcharts-data-label-connector highcharts-color-3" stroke="#8085e9" stroke-width="1" d="M 117.47781356353825 66.5 C 122.47781356353825 66.5 207 37.5 207 43.5 L 207 49.5"></path><g class="highcharts-label highcharts-data-label highcharts-data-label-color-0 " style="cursor:pointer;" transform="translate(217,209)"><text x="5" style="font-size:11px;font-weight:bold;color:black;text-outline:1px contrast;fill:black;" y="16"><tspan style="font-weight: bold;" x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">0-200元</tspan><tspan dx="0" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round" style="">: 100.0 %</tspan><tspan style="font-weight:bold" x="5" y="16">0-200元</tspan><tspan dx="0">: 100.0 %</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-1 " style="cursor:pointer;" transform="translate(85,10)"><text x="5" style="font-size:11px;font-weight:bold;color:black;text-outline:1px contrast;fill:black;" y="16"><tspan style="font-weight: bold;" x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">200-500元</tspan><tspan dx="0" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round" style="">: 0.0 %</tspan><tspan style="font-weight:bold" x="5" y="16">200-500元</tspan><tspan dx="0">: 0.0 %</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-2 " style="cursor:pointer;" transform="translate(13,33)"><text x="5" style="font-size:11px;font-weight:bold;color:black;text-outline:1px contrast;fill:black;" y="16"><tspan style="font-weight: bold;" x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">500-1000元</tspan><tspan dx="0" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round" style="">: 0.0 %</tspan><tspan style="font-weight:bold" x="5" y="16">500-1000元</tspan><tspan dx="0">: 0.0 %</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-3 " style="cursor:pointer;" transform="translate(0,57)"><text x="5" style="font-size:11px;font-weight:bold;color:black;text-outline:1px contrast;fill:black;" y="16"><tspan style="font-weight: bold;" x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">1000元以上</tspan><tspan dx="0" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round" style="">: 0.0 %</tspan><tspan style="font-weight:bold" x="5" y="16">1000元以上</tspan><tspan dx="0">: 0.0 %</tspan></text></g></g><g class="highcharts-legend"><rect fill="none" class="highcharts-legend-box" rx="0" ry="0" x="0" y="0" width="8" height="8" visibility="hidden"></rect><g><g></g></g></g></svg></div></div>
+    </div>
+</div>
+<div class="body-menu">
+    <div class="menu-box" onclick="go('?file=index')">
+        <img src="image/a-home.png">
+    </div>
+    <div class="menu-box" onclick="go('?file=tickets')">
+        <img src="image/n-menu.png">
+    </div>
+    <div class="menu-box" onclick="go('?file=find')">
+        <img src="image/n-find.png">
+    </div>
+    <div class="menu-box" onclick="go('?file=me')">
+        <img src="image/n-cart.png">
+    </div>
+
+</div>
+<div class="right-menu">
+    <div id="show-cart" class="button-ball" onclick="go('?file=cart')">
+        <img src="image/cart-ball.png">
+        <div id="cart-num">6</div>
+    </div>
+    <div id="to-top" onclick="to_top();" class="button-ball">
+        <img src="image/to-top.png">
+    </div>
+</div><script type="text/javascript">
+
+    $(function () {
+
+        $('#container1').highcharts({
+            chart: {
+                type: 'area'
+            },
+            credits:{
+                enabled:false
+            },
+            title: {
+                text: '最近30天消费趋势'
+            },
+            subtitle: {
+                text: ''
+            },
+            xAxis: {
+                allowDecimals: false,
+                labels: {
+                    formatter: function () {
+                        return this.value; // clean, unformatted number for year
+                    }
+                }
+            },
+            yAxis: {
+                title: {
+                    text: '金额'
+                },
+                labels: {
+                    formatter: function () {
+                        return this.value;
+                    }
+                }
+            },
+            tooltip: {
+                pointFormat: '{series.name} 消费 <b>{point.y:,.0f}</b>元'
+            },
+            plotOptions: {
+                area: {
+                    pointStart: 1,
+                    marker: {
+                        enabled: false,
+                        symbol: 'circle',
+                        radius: 2,
+                        states: {
+                            hover: {
+                                enabled: true
+                            }
+                        }
+                    }
+                }
+            },
+            series: [{"name":"\u65f6\u95f4->\u6700\u8fd1","data":[0,300,0,0,0,0,0,0,2138,0,0,0,0,603,0,0,0,592,0,0,0,0,0,0,0,0,0,0,0,0]}]
+        });
+        $('#container2').highcharts({
+            chart: {
+                type: 'area'
+            },
+            credits:{
+                enabled:false
+            },
+            title: {
+                text: '最近30天购票趋势'
+            },
+            subtitle: {
+                text: ''
+            },
+            xAxis: {
+                allowDecimals: false,
+                labels: {
+                    formatter: function () {
+                        return this.value; // clean, unformatted number for year
+                    }
+                }
+            },
+            yAxis: {
+                title: {
+                    text: '张数'
+                },
+                labels: {
+                    formatter: function () {
+                        return this.value;
+                    }
+                }
+            },
+            tooltip: {
+                pointFormat: '{series.name} 购票 <b>{point.y:,.0f}</b>张'
+            },
+            plotOptions: {
+                area: {
+                    pointStart: 1,
+                    marker: {
+                        enabled: false,
+                        symbol: 'circle',
+                        radius: 2,
+                        states: {
+                            hover: {
+                                enabled: true
+                            }
+                        }
+                    }
+                }
+            },
+            series: [{"name":"\u65f6\u95f4->\u6700\u8fd1","data":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0]}]
+        });
+        $('#container3').highcharts({
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false
+            },
+            credits:{
+                enabled:false
+            },
+            title: {
+                text: '最近30天购票单价'
+            },
+            tooltip: {
+                headerFormat: '{series.name}<br>',
+                pointFormat: '{point.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+                        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                        style: {
+                            color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                        }
+                    }
+                }
+            },
+            series: [{
+                type: 'pie',
+                name: '单价',
+                data: [
+                    ['0-200元',   2],
+                    ['200-500元',  0],
+                    ['500-1000元',  0],
+                    ['1000元以上',  0]
+                ]
+            }]
+        });
+
+    });
+
+</script>
+
+</body>
+</html>

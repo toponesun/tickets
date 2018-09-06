@@ -1,0 +1,550 @@
+@charset "utf-8";
+body{
+    min-width: 1000px;
+}
+aside{
+    display: none;
+}
+.body-frame{
+    width: 50%;height: 75%;position: absolute;
+    left:50%;top:50%;font-size: 16px;
+    min-width: 400px;max-width: 600px;
+    background-color: #D9E8EE;
+    transform: translateX(-50%) translateY(-50%);
+    border: solid 1px #8c8c8c;border-radius: 5px;
+    padding: 50px 10px 10px 10px;
+    z-index: 15;display: none;
+}
+.body-frame-title{
+    position: absolute;top:0;left: 10px;right: 10px;
+    height: 40px;font-family: "黑体", serif;font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+    border-bottom: solid 1px #8c8c8c;
+}
+.body-frame-close{
+    position: absolute;top:0;right: 0;
+    width: 40px;height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 32px;
+    cursor: pointer;
+}
+.body-frame-html{
+    position: relative;
+    width:100%;height:100%;overflow: auto;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+header{
+    height: 75px;width: 100%;
+    padding: 10px;font-family: "黑体",serif;
+    font-size: 22px;overflow: hidden;white-space: nowrap;
+    background-image: url("../image/header.jpg");
+    background-repeat: repeat-x;
+}
+main{
+    position: absolute;
+    padding-left: 130px;
+    left: 0;right: 0;top: 100px;bottom: 18px;
+    min-width: 1000px;font: 16px/2 "宋体";
+    background-color: #a6e1ec;
+    border-radius:5px;display: none;
+}
+nav{
+    height: 25px;
+    padding:0 5px;
+    color: #222;
+    font-family: "黑体", serif;
+    font-size: 16px;
+    line-height: 25px;
+    background-color: #fefed7;
+}
+menu{
+    position: absolute;
+    width:129px;top:100px;
+    font-family: "黑体",serif;
+    bottom: 18px;padding: 20px 0;
+    white-space: nowrap;overflow-y: auto;
+    z-index: 1;background-color: #35B2C6;
+    border-top-right-radius:5px;
+    border-bottom-right-radius: 5px;
+}
+footer{
+    position: absolute;bottom: 0;
+    width:100%;min-width: 1000px;
+    height: 18px;font-size: 12px;
+    line-height: 18px;text-align: center;
+    color: #FFF;background-color: #363636;
+}
+
+
+
+/*header内容*/
+.logo{
+    float: left;
+    height: 100%;
+}
+.user-info{
+    float: right;
+    height: 100%;
+    text-align: right;
+    padding: 10px;
+    line-height: 35px;
+    color: #FFF;
+    white-space: nowrap;
+}
+
+/*nav内容*/
+.welcome-line{
+    float: left;height: 100%;
+}
+/*menu内容*/
+.body-menu{
+    border-top: solid 1px #FFF;
+    Width:100%;overflow: hidden;
+}
+.body-menu ul {
+    Width:100%;list-style:none;
+}
+.body-menu ul li {
+    text-align: left;color: #FFF;
+    font-size : 18px;
+    border-bottom: solid 1px #FFF;
+    cursor: pointer;padding: 8px 0 8px 8px;
+}
+.body-menu ul li img{
+    width: 25px;height: 25px;
+}
+.body-menu ul li:hover {
+    color:#FFF;background: #4B6E96;
+}
+.active{
+    background-color: #4B6E96;
+}
+.menu-in-out{
+    background-color:#03879C;text-align:right;position: absolute;
+    left:0;bottom:0;right:0;padding: 4px 6px;cursor: pointer
+}
+.menu-in-out img{
+    width: 25px;height: 25px;
+}
+
+/*main内容*/
+.body-list{
+    height: 100%;width: 100%;position: relative;overflow: auto;
+}
+.body-search {
+    Width:100%;margin-top: 5px;padding:0 10px;overflow: hidden;
+}
+.term-area{
+    font-size: 14px;
+    float: left;width: 100%;overflow: hidden;
+}
+.table-box{
+    margin: 5px 10px;
+}
+.my-table{
+    width: 100%;border-collapse:collapse;
+    background-color: #FFF;line-height: 22px;
+}
+.my-table td
+{
+    text-align: center;padding: 5px;border: 1px solid #cbcbcb;
+}
+
+.my-table th{
+    color: #FFF;background-color: #4B6E96;
+    text-align: center;padding: 8px;border: 1px solid #cbcbcb;
+}
+
+/*file=index*/
+.title-lg{
+    position: absolute;
+    left: 20px;right: 20px;color: #FFF;
+    min-width: 400px;font-size: 24px;
+    line-height: 48px;text-align: center;
+    font-family: "黑体",serif;background-color: #4B6E96;
+}
+.chart-group{
+    position: absolute;z-index: 1;
+    left: 20px;right: 20px;top:65px;bottom: 10px;
+}
+.chart-box{
+    width: 50%;height: 50%;
+    float: left;position: relative;
+}
+.chart{
+    width: 100%;height: 100%;position: relative;
+}
+
+
+/*file=scenic*/
+.item-list{
+    overflow: auto;
+    padding-bottom: 10px;
+}
+.card-item{
+    width: 220px;
+    height: 220px;
+    background-color: #FFF;
+    color: #333;float: left;
+    margin-left: 10px;
+    margin-top: 5px;
+    position: relative;
+    cursor: pointer;
+}
+.card-item:hover{
+    box-shadow: 0 0 20px 0 #F08000;
+    color: #F08000;
+    border-radius: 2px;
+    border:solid 0.5px #F08000;
+}
+.card-img{
+    width: 100%;
+    height: 150px;
+}
+.card-img img{
+    width: 100%;
+    height: 100%;
+}
+.card-info{
+    width: 100%;
+    height: 70px;
+    overflow: hidden;
+    padding: 5px 10px 0 10px;
+}
+.card-name{
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 28px;
+    font-size: 15px;
+}
+.card-price{
+    color: #333;
+    font-size: 12px;
+    line-height: 32px;
+}
+.card-price span{
+    color: #F08000;
+    font-family: "Arial", serif;
+    font-size: 16px;
+}
+.card-price span b{
+    font-size: 24px;
+}
+.card-href{
+    position: absolute;right: 8px;bottom: 8px;
+}
+
+/*确认订单内容*/
+.ready-pay{
+    position: absolute;padding: 8px 40px;
+    background-color: #FFA800;
+    font-family: "黑体", serif;font-size: 21px;
+    line-height: 30px;text-align: center;
+    color: #FFF;border-radius: 5px;cursor:pointer;
+}
+/*收银台内容*/
+.cashier{
+    position:absolute;top:65px;bottom:10px;left: 20px;right: 20px;
+    background-color: #FFF;padding: 20px 50px;
+    overflow: auto;min-width: 400px;
+}
+.cashier-span{
+    background: #00AAEF;color: #FFF;
+    font-size: 22px;font-family: "黑体", serif;
+    padding: 5px 30px;border-radius: 5px;
+    white-space: nowrap;margin: 0 20px 20px 0;
+}
+.cashier-tip{
+    font-family: "黑体", serif;
+    font-size: 16px;color: #363636;
+}
+.order-left-time{
+    font-size: 32px;font-weight: bold;color: #F00;
+}
+.not-table{
+    width: auto;min-width: 200px;
+    border-collapse:collapse;
+    background-color: #FFF;line-height: 20px;
+    font-size: 20px;text-align: left;font-family: "黑体", serif;
+}
+.not-table td
+{
+    padding: 10px 100px 10px 15px;
+    border: solid 1px #cbcbcb;white-space: nowrap;
+}
+.payment-area{
+    width: 100%;
+    height: 45px;
+    font-size: 18px;
+    line-height: 45px;
+    border-radius:5px;
+    margin-bottom: 10px;
+}
+.payment-area label{
+    cursor: pointer;
+    width: 220px;
+    padding: 0 0 0 10px;
+    margin: 5px 10px 5px 10px;
+    font-family: "黑体", serif;
+    font-size: 20px;
+    border: solid 1px #ccc;
+    border-radius: 2px;
+}
+.payment-area label input[type="radio"]{
+    display: none;
+    cursor: pointer;
+}
+
+.payment-area label input + span {
+    padding: 4px 30px;
+    display: inline;
+    background-image: url("../image/checkBox-F.png");
+    background-repeat: no-repeat;
+    background-position:0;
+}
+.payment-area label input:checked + span {
+    background-image: url("../image/checkBox-T.png");
+}
+
+
+/*cart内容*/
+.body-right{
+    position: fixed;width: 219px;
+    right: 0;top: 100px;bottom: 18px;background-color: #35B2C6;
+    border-radius:5px;z-index: 2;overflow: hidden;display: none;
+}
+.cart{
+    width: 100%;height: 40px;line-height: 40px;
+    position: relative;font-size: 22px;
+    color: #FFF;font-family: "黑体", serif;
+}
+.cart-ears{
+    width: 40px;
+    cursor:pointer;padding:5px;height: 100%;background-color: #35B2C6
+}
+.cart-title{
+    width: 139px;overflow: hidden;background-color: #03879C;
+    cursor:pointer;height: 100%;float: left;padding: 0 10px;
+    border-bottom-left-radius: 15px;border-bottom-right-radius: 15px;
+}
+.cart-list{
+    position: absolute;width: 100%;
+    top: 40px;bottom: 100px;overflow-y:auto;
+}
+
+.sale-name{
+    color: #02879B;background-color: #fefed7;line-height: 26px;
+    font-family: "黑体", serif;font-size: 16px;padding: 0 10px;
+}
+.goods-sale{
+    border-bottom: solid 1px #FFF;padding: 5px;
+}
+.goods{
+    padding: 5px 8px;width: 100%;
+    margin-bottom: 3px;position: relative;
+    font: 15px/1.5 "宋体";line-height: 22px;
+    background-color: #FFF;overflow: hidden;
+    white-space: nowrap;text-overflow: ellipsis;border-radius:5px;
+}
+.cart-ticket-title{
+    height:45px;padding: 0 18px 0 0;
+    font-size: 14px;line-height:22px;overflow: hidden;
+    text-overflow: ellipsis;white-space: normal;
+    display: -webkit-box;-webkit-box-orient: vertical;
+    word-break: break-all;-webkit-line-clamp: 2;
+}
+.cart-ticket-title:before{
+    content: " ";padding: 0 14px;
+}
+.cart-ticket-title span{
+    font-size: 12px;color: #FFF;background-color: #F00;padding: 1px 3px;vertical-align: 1px;border-radius: 5px;
+}
+.ticket-info{
+    height: 52px;line-height:18px;padding: 0 10px;font-size: 12px;color: #626262;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;
+}
+.ticket-info span{
+    font-size:12px;color:#02879B;border: solid 0.5px #02879B;border-radius:3px;padding: 0 1px;margin-right: 5px;
+}
+.del-cart{
+    width: 25px;height: 25px;
+    position: absolute;cursor: pointer;
+    right: 2px;top: 2px;background-color: #FFF;
+}
+.check-all{
+    position:absolute;bottom:70px;left:0;width:100px;height:30px;cursor:pointer;
+    background-color: #03879C;font-family: "黑体", serif;padding: 0 5px;
+    text-align:left;line-height:30px;font-size: 18px;color: #FFF;
+}
+.clear-cart{
+    position:absolute;bottom:70px;left:100px;right:0;cursor:pointer;
+    background-color: #03879C;font-family: "黑体", serif;padding: 0 5px;
+    text-align:right;line-height:30px;font-size: 17px;color: #FFF;
+}
+.pay{
+    width: 100%;
+    height: 70px;
+    padding: 6px 0;
+    position: absolute;
+    bottom: 0;
+    font-family: "黑体", serif;
+    color: #FFF;
+    text-align: center;
+    font-size: 22px;
+    line-height: 28px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor:pointer;
+    border-bottom-left-radius:5px;
+}
+
+.cart-ball{
+    position: fixed;cursor: pointer;
+    bottom: 50px;right: 15px;
+    z-index: 11;padding: 2px;
+    width: 60px;height: 60px;
+    border-radius: 50px;background-color: #FF8500;
+}
+#cart-num{
+    color:#FF8500;font-size:14px;position: absolute;
+    right: 0;top: 0;background-color:#FFF;text-align:center;
+    width: 24px;height: 24px;line-height: 20px;border: solid 2px #FF8500;
+    border-radius:20px;overflow: hidden;
+}
+
+/*分页样式*/
+.pagination{
+    width: 100%;padding: 10px 0;font-size: 16px;
+    font-family: "宋体",serif;overflow: hidden;
+    display: block;
+}
+.pagination ul{
+    list-style-type: none;float:right;
+}
+.pagination ul li{
+    float: left;
+    border: solid 1px #35B2C6;
+    padding: 0 12px;
+    cursor: pointer;
+    line-height: 32px;
+    margin-right: 3px;
+    background: #FFF;
+    color: #35B2C6;
+    border-radius: 5px;
+}
+.pagination ul li:hover{
+    color: #FFF;
+    background: #35B2C6;
+}
+.pagination ul li.active{
+    color: #FFF;
+    background-color: #35B2C6;
+    border-color: #35B2C6;
+}
+
+/*弹出窗口内容样式*/
+.main-title{
+    background-color:#FFF;margin-top:8px;padding: 5px 10px;
+    font-size: 20px;line-height:25px;border-bottom: solid 0.5px #8c8c8c;
+    border-top: solid 0.5px #8c8c8c;font-family: "黑体",serif;
+}
+.main-ticket-info{
+    position: relative;line-height: 22px;
+    background-color:#FFF;margin-top:8px;padding: 5px 10px;
+    border-bottom: solid 0.5px #8c8c8c;
+    border-top: solid 0.5px #8c8c8c;
+}
+.main-ticket-detail{
+    background-color:#FFF;margin-top:8px;
+    padding: 10px;border-top: solid 0.5px #8c8c8c
+}
+.ticket-img{
+    float:left;height: 100px;width: 100px;padding: 2px;
+}
+.ticket-img img{
+    height: 100%;width: 100%;
+    box-shadow: 0 0 5px 1px #02879B;
+    border-radius: 5px;
+}
+.my-card{
+    overflow: hidden;
+    background-color: #FFF;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    width: auto;
+    height: auto;
+    position: relative;
+    margin: 8px 0;
+    padding: 8px 8px;
+}
+.ticket-title{
+    height:50px;font-size: 16px;padding: 0 5px;
+    line-height:24px;overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+    text-overflow: ellipsis;white-space: normal
+}
+
+
+/*二维码样式*/
+.ticket-detail{
+
+}
+
+#qrcode {
+    width: 50%;
+    min-width: 150px;
+    max-width: 200px;
+    max-height: 200px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 1px #02879B;padding: 15px
+}
+#qrcode img {
+    width: 100%;
+    height: 100%;
+}
+
+/*类似手机端的展示*/
+
+.card-left{
+    line-height: 26px;font-size:12px;width:60px;
+    float: left;text-align: center;
+}
+.card-left-i{
+    line-height: 60px;font-size:30px;
+}
+.card-left-i img{
+    width: 60px;height: 60px;
+}
+.card-text{
+    padding-left:10px;line-height:25px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap
+}
+.card-text span{
+    font-size: 12px;color: #FFF;background-color: #F0AD4E;padding: 1px 3px;vertical-align: 1px;border-radius: 5px;line-height: 25px;
+}
+.card-right{
+    position: absolute;bottom:5px;right: -5px;width: auto;height: 80px;opacity:0.8
+}
+.card-right img{
+    height: 100%;
+}
+.ticket-title{
+    height:45px;padding: 0 10px;
+    font-size: 14px;line-height:22px;overflow: hidden;
+    text-overflow: ellipsis;white-space: normal;
+    display: -webkit-box;-webkit-box-orient: vertical;
+    word-break: break-all;-webkit-line-clamp: 2;
+}
+.ticket-title span{
+    font-size: 12px;color: #FFF;background-color: #F00;padding: 1px 3px;vertical-align: 1px;border-radius: 5px;
+}
+
